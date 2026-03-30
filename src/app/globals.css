@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #FAF9F6;
+  --color-ink: #1C1B19;
+  --color-ink-muted: #1C1B1966;
+  --color-accent: #4A90D9;
+  --color-divider: #1C1B1926;
+  --color-selection: #4A90D933;
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+}
+
+/* Fluid book typography — scales proportionally so the page
+   feels the same on mobile as it does on desktop */
+.book-page {
+  font-size: clamp(13px, 1.5vw, 18px);
+  line-height: 1.75;
+}
+
+::selection {
+  background-color: var(--color-selection);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

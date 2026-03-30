@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/jasonneill/Code/production/slop-cannons -type f \\\\\\(-name *.json -o -name .* \\\\\\) -not -path */node_modules/* -not -path */.git/*)",
+      "Bash(find /Users/jasonneill/Code/production/slop-cannons -not -path */.git/* -not -path */.DS_Store)",
+      "WebFetch(domain:lethain.com)",
+      "WebFetch(domain:fonts.google.com)",
+      "WebFetch(domain:www.jetbrains.com)",
+      "WebFetch(domain:typescale.com)",
+      "Bash(npx:*)",
+      "Bash(cp -r site/src .)",
+      "Bash(cp -r site/public .)",
+      "Bash(npm install:*)",
+      "Bash(kill %1)",
+      "Bash(lsof -ti:3333)",
+      "Bash(xargs kill:*)",
+      "Bash(grep -c '^\\\\s*`' /Users/jasonneill/Code/production/slop-cannons/src/content/preface.ts)"
+    ]
+  }
+}
