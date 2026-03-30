@@ -2,12 +2,6 @@
 
 import { SECTION_ONE } from "@/content/preface";
 
-// shape-outside polygon traces the cup's left visible edge.
-// Derived from pixel analysis of the cropped cup image (652x710).
-// Each point: x% = leftmost dark pixel / image width, y% = band position.
-// shape-outside polygon for CSS float. For a right-float, 100% x = right
-// edge = no text displacement. Lower x% = more intrusion into text area.
-// Top 18% is 100% (no displacement) so text above the cup rim stays full width.
 const CUP_SHAPE = `polygon(
   100% 0%, 100% 18%,
   44% 22%, 38% 25%, 31% 28%, 24% 32%,
@@ -25,16 +19,16 @@ export function FictionalStory() {
         src="/coffee-cup.png"
         alt=""
         aria-hidden="true"
+        className="float-right"
         style={{
-          float: "right",
-          width: 420,
+          width: "clamp(380px, 45vw, 420px)",
           height: "auto",
-          marginRight: -160,
-          marginTop: 240,
+          marginRight: "clamp(-280px, -30vw, -160px)",
+          marginTop: "clamp(100px, 20vw, 240px)",
           marginLeft: 16,
           marginBottom: 16,
           shapeOutside: CUP_SHAPE,
-          shapeMargin: "16px",
+          shapeMargin: "12px",
           mixBlendMode: "multiply",
         }}
       />
