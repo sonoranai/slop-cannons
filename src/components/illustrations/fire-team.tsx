@@ -1,10 +1,10 @@
 export function FireTeam() {
   const streams = [
-    { label: "Revenue", y: 28 },
-    { label: "Product", y: 80 },
-    { label: "Finance & Accounting", y: 132 },
-    { label: "Operations", y: 184 },
-    { label: "Customer Experience", y: 236 },
+    { label: "Revenue", y: 270 },
+    { label: "Product", y: 322 },
+    { label: "Finance & Accounting", y: 374 },
+    { label: "Operations", y: 426 },
+    { label: "Customer Experience", y: 478 },
   ];
 
   const bandH = 42;
@@ -28,6 +28,69 @@ export function FireTeam() {
       aria-hidden="true"
       className="w-full h-auto"
     >
+      {/* ═══ C-SUITE (top) ═══ */}
+      <g>
+        {["CEO", "CTO", "CFO", "CRO", "CCO"].map((title, i) => (
+          <g key={title}>
+            <rect x={115 + i * 82} y={20} width="68" height="22" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="0.8" />
+            <text x={115 + i * 82 + 34} y="31" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" dominantBaseline="central">{title}</text>
+          </g>
+        ))}
+        <line x1="115" y1="31" x2="525" y2="31" stroke="#4A90D9" strokeWidth="0.3" opacity="0.1" />
+      </g>
+      <text x="310" y="14" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" opacity="0.35">Senior Leadership</text>
+
+      {/* ═══ C-SUITE → TRIAD ═══ */}
+      <line x1="310" y1="42" x2="310" y2="72" stroke="#4A90D9" strokeWidth="0.7" opacity="0.35" />
+      <polygon points="306,70 310,77 314,70" fill="#4A90D9" opacity="0.35" stroke="none" />
+      <text x="310" y="60" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" textAnchor="middle" opacity="0.18">no translation layers</text>
+
+      {/* ═══ ENGINEERING TRIAD ═══ */}
+      <rect x="140" y="78" width="340" height="46" rx="6" stroke="currentColor" strokeWidth="1" strokeDasharray="5 3" opacity="0.25" />
+
+      <rect x="155" y="88" width="90" height="26" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="1" />
+      <rect x="265" y="88" width="90" height="26" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="1" />
+      <rect x="375" y="88" width="90" height="26" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="1" />
+
+      <line x1="245" y1="101" x2="265" y2="101" stroke="#4A90D9" strokeWidth="0.8" opacity="0.4" />
+      <line x1="355" y1="101" x2="375" y2="101" stroke="#4A90D9" strokeWidth="0.8" opacity="0.4" />
+      <circle cx="255" cy="101" r="2" fill="#4A90D9" stroke="none" opacity="0.5" />
+      <circle cx="365" cy="101" r="2" fill="#4A90D9" stroke="none" opacity="0.5" />
+
+      <g fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7.5" textAnchor="middle" dominantBaseline="central">
+        <text x="200" y="101">Dir Eng</text>
+        <text x="310" y="101">Dir Eng</text>
+        <text x="420" y="101">Dir Eng</text>
+      </g>
+
+      <text x="310" y="138" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" opacity="0.4">Engineering Triad</text>
+
+      {/* Triad annotation */}
+      <text x="490" y="84" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5.5" opacity="0.25">
+        <tspan x="490" dy="0">High-taste, high-trust leaders.</tspan>
+        <tspan x="490" dy="8">Compose and decompose pods</tspan>
+        <tspan x="490" dy="8">to highest and best use of</tspan>
+        <tspan x="490" dy="8">engineering resources.</tspan>
+      </text>
+
+      {/* ═══ TRIAD → ORCHESTRATION LAYER ═══ */}
+      <line x1="310" y1="145" x2="310" y2="170" stroke="#4A90D9" strokeWidth="0.8" opacity="0.35" />
+      <polygon points="306,168 310,175 314,168" fill="#4A90D9" opacity="0.35" stroke="none" />
+      <text x="370" y="160" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" opacity="0.2">subscribes</text>
+
+      {/* ═══ GENERATIVE ORCHESTRATION & MONITORING LAYER ═══ */}
+      <rect x="155" y="178" width="310" height="30" rx="4" stroke="currentColor" fill="#FAF9F6" strokeWidth="1.2" />
+      <text x="310" y="193" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" dominantBaseline="central">
+        Generative Orchestration &amp; Monitoring Layer
+      </text>
+
+      {/* ═══ ORCHESTRATION → PODS ═══ */}
+      <g stroke="#4A90D9" strokeWidth="0.5" opacity="0.2">
+        {pods.map(([si, px], i) => (
+          <line key={i} x1={310} y1={208} x2={px + podW / 2} y2={streams[si].y} />
+        ))}
+      </g>
+
       {/* ═══ WORK STREAM BANDS ═══ */}
       {streams.map((s, i) => (
         <g key={i}>
@@ -58,88 +121,24 @@ export function FireTeam() {
       <text x="227" y={streams[0].y - 10} fill="#4A90D9" fontFamily="'JetBrains Mono', monospace" fontSize="6" textAnchor="middle" opacity="0.4">Composed: Pipeline Migration</text>
 
       {/* Tour of duty */}
-      <path d="M500 100 C540 100, 550 200, 500 245" stroke="#4A90D9" strokeWidth="0.7" strokeDasharray="3 3" opacity="0.25" />
-      <text x="555" y="170" fill="#4A90D9" fontFamily="'JetBrains Mono', monospace" fontSize="5.5" opacity="0.3">tour of</text>
-      <text x="555" y="178" fill="#4A90D9" fontFamily="'JetBrains Mono', monospace" fontSize="5.5" opacity="0.3">duty</text>
+      <path d="M500 342 C540 342, 550 430, 500 487" stroke="#4A90D9" strokeWidth="0.7" strokeDasharray="3 3" opacity="0.25" />
+      <text x="555" y="412" fill="#4A90D9" fontFamily="'JetBrains Mono', monospace" fontSize="5.5" opacity="0.3">tour of</text>
+      <text x="555" y="420" fill="#4A90D9" fontFamily="'JetBrains Mono', monospace" fontSize="5.5" opacity="0.3">duty</text>
 
       {/* Legend */}
       <g opacity="0.3">
-        <rect x="500" y="30" width="44" height="14" rx="2" stroke="currentColor" fill="#FAF9F6" strokeWidth="0.6" />
-        <text x="522" y="37" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" textAnchor="middle" dominantBaseline="central">ES</text>
-        <text x="550" y="37" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" dominantBaseline="central">Expert Scaler</text>
+        <rect x="500" y="272" width="44" height="14" rx="2" stroke="currentColor" fill="#FAF9F6" strokeWidth="0.6" />
+        <text x="522" y="279" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" textAnchor="middle" dominantBaseline="central">ES</text>
+        <text x="550" y="279" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" dominantBaseline="central">Expert Scaler</text>
       </g>
       <g opacity="0.3">
-        <rect x="500" y="48" width="44" height="14" rx="2" stroke="currentColor" fill="#FAF9F6" strokeWidth="0.6" />
-        <text x="522" y="55" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" textAnchor="middle" dominantBaseline="central">SC</text>
-        <text x="550" y="55" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" dominantBaseline="central">Slop Cannon</text>
+        <rect x="500" y="290" width="44" height="14" rx="2" stroke="currentColor" fill="#FAF9F6" strokeWidth="0.6" />
+        <text x="522" y="297" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" textAnchor="middle" dominantBaseline="central">SC</text>
+        <text x="550" y="297" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" dominantBaseline="central">Slop Cannon</text>
       </g>
-
-      {/* ═══ CONNECTIONS: Pods → Hypervisor ═══ */}
-      <g stroke="#4A90D9" strokeWidth="0.5" opacity="0.2">
-        {pods.map(([si, px], i) => (
-          <line key={i} x1={px + podW / 2} y1={streams[si].y + bandH} x2={310} y2={295} />
-        ))}
-      </g>
-
-      {/* ═══ GENERATIVE AI HYPERVISOR ═══ */}
-      <rect x="190" y="290" width="240" height="30" rx="4" stroke="currentColor" fill="#FAF9F6" strokeWidth="1.2" />
-      <text x="310" y="305" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7.5" textAnchor="middle" dominantBaseline="central">
-        Generative Orchestration &amp; Monitoring Layer
-      </text>
-
-      {/* ═══ HYPERVISOR → TRIAD (subscribe) ═══ */}
-      <line x1="310" y1="320" x2="310" y2="350" stroke="#4A90D9" strokeWidth="0.8" opacity="0.35" />
-      <polygon points="306,348 310,355 314,348" fill="#4A90D9" opacity="0.35" stroke="none" />
-      <text x="370" y="338" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" opacity="0.2">subscribes</text>
-
-      {/* ═══ ENGINEERING TRIAD ═══ */}
-      <rect x="140" y="355" width="340" height="46" rx="6" stroke="currentColor" strokeWidth="1" strokeDasharray="5 3" opacity="0.25" />
-
-      <rect x="155" y="365" width="90" height="26" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="1" />
-      <rect x="265" y="365" width="90" height="26" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="1" />
-      <rect x="375" y="365" width="90" height="26" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="1" />
-
-      <line x1="245" y1="378" x2="265" y2="378" stroke="#4A90D9" strokeWidth="0.8" opacity="0.4" />
-      <line x1="355" y1="378" x2="375" y2="378" stroke="#4A90D9" strokeWidth="0.8" opacity="0.4" />
-      <circle cx="255" cy="378" r="2" fill="#4A90D9" stroke="none" opacity="0.5" />
-      <circle cx="365" cy="378" r="2" fill="#4A90D9" stroke="none" opacity="0.5" />
-
-      <g fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7.5" textAnchor="middle" dominantBaseline="central">
-        <text x="200" y="378">Dir Eng</text>
-        <text x="310" y="378">Dir Eng</text>
-        <text x="420" y="378">Dir Eng</text>
-      </g>
-
-      <text x="310" y="415" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" opacity="0.4">Engineering Triad</text>
-
-      {/* Triad annotation */}
-      <text x="490" y="361" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5.5" opacity="0.25">
-        <tspan x="490" dy="0">High-taste, high-trust leaders.</tspan>
-        <tspan x="490" dy="8">Compose and decompose pods</tspan>
-        <tspan x="490" dy="8">to highest and best use of</tspan>
-        <tspan x="490" dy="8">engineering resources.</tspan>
-      </text>
-
-      {/* ═══ TRIAD → C-SUITE ═══ */}
-      <line x1="310" y1="425" x2="310" y2="455" stroke="#4A90D9" strokeWidth="0.7" opacity="0.35" />
-      <polygon points="306,453 310,460 314,453" fill="#4A90D9" opacity="0.35" stroke="none" />
-      <text x="310" y="445" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="5" textAnchor="middle" opacity="0.18">no translation layers</text>
-
-      {/* ═══ C-SUITE ═══ */}
-      <g>
-        {["CEO", "CTO", "CFO", "CRO", "CCO"].map((title, i) => (
-          <g key={title}>
-            <rect x={115 + i * 82} y={465} width="68" height="22" rx="3" stroke="currentColor" fill="#FAF9F6" strokeWidth="0.8" />
-            <text x={115 + i * 82 + 34} y="476" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" dominantBaseline="central">{title}</text>
-          </g>
-        ))}
-        <line x1="115" y1="476" x2="525" y2="476" stroke="#4A90D9" strokeWidth="0.3" opacity="0.1" />
-      </g>
-
-      <text x="310" y="501" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="7" textAnchor="middle" opacity="0.35">Senior Leadership</text>
 
       {/* ═══ FIGURE LABEL ═══ */}
-      <text x="310" y="535" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="8" textAnchor="middle" opacity="0.4">
+      <text x="310" y="545" fill="currentColor" fontFamily="'JetBrains Mono', monospace" fontSize="8" textAnchor="middle" opacity="0.4">
         Figure 0.3 — Composable Fire Teams
       </text>
     </svg>
