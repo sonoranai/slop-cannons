@@ -48,7 +48,8 @@ export function SocialLinks({ position }: { position: "top" | "bottom" }) {
           target={href.startsWith("mailto:") ? undefined : "_blank"}
           rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
           aria-label={label}
-          className="text-ink opacity-20 hover:opacity-50 transition-opacity duration-200"
+          className="hover:opacity-70 transition-opacity duration-200"
+          style={{ color: "rgba(140, 120, 180, 0.5)" }}
         >
           {icon}
         </a>
