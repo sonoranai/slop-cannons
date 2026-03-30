@@ -23,7 +23,7 @@ body {
 /* Fluid book typography — scales proportionally so the page
    feels the same on mobile as it does on desktop */
 .book-page {
-  font-size: clamp(13px, 1.5vw, 18px);
+  font-size: clamp(10px, 1.2vw, 14.5px);
   line-height: 1.75;
 }
 

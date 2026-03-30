@@ -22,7 +22,8 @@ export function DefinitionsPod() {
             color: "#2A4A7F",
           }}
         >
-          FORWARD-DEPLOYED ENGINEERING POD
+          <span className="hidden md:inline">FORWARD-DEPLOYED ENGINEERING POD</span>
+          <span className="md:hidden">FDE POD</span>
         </div>
 
         {/* Expert Scaler */}

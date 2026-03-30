@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const links = [
   {
     href: "https://www.linkedin.com/in/jasonneill/",
@@ -31,16 +35,9 @@ const links = [
   },
 ];
 
-export function SocialLinks({ position }: { position: "top" | "bottom" }) {
+function IconLinks() {
   return (
-    <nav
-      aria-label="Contact"
-      className={
-        position === "top"
-          ? "fixed top-[2em] right-[2em] z-10 flex gap-[1em]"
-          : "flex justify-center gap-[1.5em] pt-[4em] pb-[2em]"
-      }
-    >
+    <>
       {links.map(({ href, label, icon }) => (
         <a
           key={label}
@@ -54,6 +51,66 @@ export function SocialLinks({ position }: { position: "top" | "bottom" }) {
           {icon}
         </a>
       ))}
+    </>
+  );
+}
+
+function MobileMenu() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="md:hidden fixed top-[1em] right-[1em] z-10">
+      {!open ? (
+        <button
+          onClick={() => setOpen(true)}
+          aria-label="Open menu"
+          className="hover:opacity-70 transition-opacity duration-200"
+          style={{ color: "rgba(140, 120, 180, 0.5)" }}
+        >
+          {/* Empty triangle pointing down — V shape without top edge */}
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-[1.2em] h-[1.2em]">
+            <path d="M3 5l5 6 5-6" />
+          </svg>
+        </button>
+      ) : (
+        <div
+          className="flex items-center gap-[0.8em] p-[0.5em] rounded-md"
+          style={{ backgroundColor: "#FAF9F6", boxShadow: "0 1px 4px rgba(0,0,0,0.06)" }}
+        >
+          <IconLinks />
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="hover:opacity-70 transition-opacity duration-200 ml-[0.3em]"
+            style={{ color: "rgba(140, 120, 180, 0.5)" }}
+          >
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-[1em] h-[1em]">
+              <path d="M4 12L12 4M4 4l8 8" />
+            </svg>
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function SocialLinks({ position }: { position: "top" | "bottom" }) {
+  if (position === "top") {
+    return (
+      <>
+        {/* Desktop: fixed icons */}
+        <nav aria-label="Contact" className="hidden md:flex fixed top-[2em] right-[2em] z-10 gap-[1em]">
+          <IconLinks />
+        </nav>
+        {/* Mobile: caret toggle */}
+        <MobileMenu />
+      </>
+    );
+  }
+
+  return (
+    <nav aria-label="Contact" className="flex justify-center gap-[1.5em] pt-[4em] pb-[2em]">
+      <IconLinks />
     </nav>
   );
 }

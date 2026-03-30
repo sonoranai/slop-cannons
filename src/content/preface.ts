@@ -53,7 +53,7 @@ export const SECTION_TWO = [
 ];
 
 export const SECTION_THREE = [
-  `Generative AI is a forcing function, but it alone is not responsible for the coming carnage in engineering organizational charts. The next generation leads from a place of honesty. They speak truth to power. There is no place for layers of leadership without value. It isn\u2019t AI that\u2019s forcing the compression, though it is a tool of the coming compression into value-first leadership. The pressure is coming from both directions. From the technology that makes the layers unnecessary. And from the people who refuse to pretend they ever were.`,
+  `Generative AI is a forcing function, but it alone is not responsible for the coming carnage in engineering organizational charts. The next generation values radical candor. They speak truth to power. There is no place for layers of leadership without value. It isn\u2019t AI that\u2019s forcing the compression, though it is a tool of the coming compression into value-first leadership. The pressure is coming from both directions. From the technology that makes the layers unnecessary. And from the people who refuse to pretend they ever were.`,
 
   `I studied finance in college. Dropped out. I had watched older friends graduate with the same degree, land the jobs they were supposed to want, and loathe every hour of them while earning less than I was making in sales. There was no reason to pay tuition to earn less, I reasoned. So I sold. Inbound, outbound, the kind of selling where you learn one thing fast: you either created value for the person across the table or you wasted their time. There was no third option. A decade of that will calibrate you.`,
 
@@ -87,7 +87,7 @@ export const SECTION_FOUR = [
 
   `That replaces the career ladder with visible, system-measured impact.`,
 
-  `That replaces the team hierarchy with fire teams of two pairs. Expert Scalers and Slop Cannons. Deep-system thinkers and high-velocity builders. Operating within streams of subject-matter expertise: security, networking, user experience, payment rails, machine learning. Not teams with managers. Currents with practitioners.`,
+  `That replaces the team hierarchy with fire teams of two pairs. Expert Scalers and Slop Cannons. Deep-system thinkers and high-velocity builders. Deployable across business verticals, gathering subject-matter expertise and iterating quickly to determine the most valuable products. Not teams with managers. Currents with practitioners.`,
 
   `Think of each pair as a container. Two processes inside: one Slop Cannon, one Expert Scaler. The container is elastic. It might be deployed to finance one week and sales the next. It might be composed with other containers to solve a large, high-value problem. It might be distributed for discovery across every vertical inside the organization. It might be handed an MVP for a new product and given a week. The latent capacity of these pairs is never wasted because the pairs are never permanently assigned. They flow to wherever the highest-value problem is right now. Loosely coupled. High impact. Stateless in their organizational attachment. Deeply stateful in their expertise.`,
 

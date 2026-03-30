@@ -10,11 +10,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Slop Cannons: Rethinking Organizations for the Age of AI",
+  title: "SLOP CANNONS",
   description:
     "An indictment of the modern engineering organization and a blueprint for the compression. By engineers, for engineers.",
   openGraph: {
-    title: "Slop Cannons: Rethinking Organizations for the Age of AI",
+    title: "SLOP CANNONS",
     description:
       "An indictment of the modern engineering organization and a blueprint for the compression.",
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Slop Cannons: Rethinking Organizations for the Age of AI",
+    title: "SLOP CANNONS",
     description:
       "An indictment of the modern engineering organization and a blueprint for the compression.",
   },

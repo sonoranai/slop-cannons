@@ -14,7 +14,9 @@
       "Bash(kill %1)",
       "Bash(lsof -ti:3333)",
       "Bash(xargs kill:*)",
-      "Bash(grep -c '^\\\\s*`' /Users/jasonneill/Code/production/slop-cannons/src/content/preface.ts)"
+      "Bash(grep -c '^\\\\s*`' /Users/jasonneill/Code/production/slop-cannons/src/content/preface.ts)",
+      "Bash(curl -s http://localhost:3333)",
+      "WebFetch(domain:slopcannons.com)"
     ]
   }
 }
