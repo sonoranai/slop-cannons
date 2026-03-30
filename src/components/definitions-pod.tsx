@@ -4,7 +4,7 @@ export function DefinitionsPod() {
       <div
         className="relative mx-auto"
         style={{
-          border: "1.5px dashed rgba(28, 27, 25, 0.2)",
+          border: "1.5px dashed rgba(140, 120, 180, 0.35)",
           borderRadius: "10px",
           padding: "2.5em 1.8em 1.8em",
         }}
@@ -19,7 +19,7 @@ export function DefinitionsPod() {
             fontSize: "0.75em",
             fontWeight: 600,
             letterSpacing: "0.2em",
-            color: "rgba(28, 27, 25, 0.35)",
+            color: "#2A4A7F",
           }}
         >
           FORWARD-DEPLOYED ENGINEERING POD
@@ -51,15 +51,15 @@ export function DefinitionsPod() {
         <div className="flex justify-center" style={{ padding: "0.2em 0" }}>
           <svg width="20" height="48" viewBox="0 0 20 48" fill="none">
             {/* Top diamond */}
-            <polygon points="10,2 14,6 10,10 6,6" fill="#4A90D9" opacity="0.5" />
+            <polygon points="10,2 14,6 10,10 6,6" fill="#2A4A7F" opacity="0.5" />
             {/* Line */}
-            <line x1="10" y1="10" x2="10" y2="20" stroke="#4A90D9" strokeWidth="1" opacity="0.4" />
+            <line x1="10" y1="10" x2="10" y2="20" stroke="#2A4A7F" strokeWidth="1" opacity="0.4" />
             {/* Center dot */}
-            <circle cx="10" cy="24" r="3.5" fill="#4A90D9" opacity="0.55" />
+            <circle cx="10" cy="24" r="3.5" fill="#2A4A7F" opacity="0.55" />
             {/* Line */}
-            <line x1="10" y1="28" x2="10" y2="38" stroke="#4A90D9" strokeWidth="1" opacity="0.4" />
+            <line x1="10" y1="28" x2="10" y2="38" stroke="#2A4A7F" strokeWidth="1" opacity="0.4" />
             {/* Bottom diamond */}
-            <polygon points="10,38 14,42 10,46 6,42" fill="#4A90D9" opacity="0.5" />
+            <polygon points="10,38 14,42 10,46 6,42" fill="#2A4A7F" opacity="0.5" />
           </svg>
         </div>
 
