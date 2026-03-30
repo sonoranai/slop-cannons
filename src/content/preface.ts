@@ -25,7 +25,7 @@ export const SECTION_ONE = [
 export const SECTION_TWO = [
   `This book is an indictment.`,
 
-  `Not of the people in that room. Not of Marc, who is a composite drawn from my fifteen years in software engineering and the engineering organizations I and friends have worked inside. Not of the PM with his acronyms. Not of the DoE with his muted syncs. Not even of the Director of Security with her sharpened knife. They are operating rationally inside a system that rewards the wrong things.`,
+  `Not of the people in that room. Not of Marc, who is a composite drawn from my fifteen years in software engineering and the engineering organizations I and friends have worked inside. Not of the PM with his acronyms. Not of the DoE with his muted syncs. Not even of the Director of Security with her sharpened knife. They are operating rationally inside a system that rewards proximity to power over the ability to create value.`,
 
   `The indictment is of the system.`,
 
@@ -67,7 +67,7 @@ export const SECTION_THREE = [
 
   `It is not a popular question inside most engineering organizations. They prefer to answer it with proxies. Headcount growth. Roadmap completion percentage. Story points. Velocity. Number of PRs merged. Lines of code. These are not measures of value. They are measures of activity. The organizational structure exists in large part to convert activity into the appearance of value, because the appearance of value is what gets funded, and what gets funded is what survives, and what survives is what the people inside the structure have built their careers on.`,
 
-  `I built my career on it too. I have scaled engineering organizations from a handful of people to cross-continent teams, inside firms where data is measured in billions of events per day and the consequences of failure are external and immediate. I have maintained single-digit attrition in industries that actively poach. I have mentored engineers to senior, staff, and lead roles. I built the ladders, ran the calibrations, wrote the job descriptions, defended the headcount. By every conventional measure, I was a successful engineering leader. And I was. Inside the system. The system is what\u2019s breaking.`,
+  `I built my career on it too. I have worked on both sides of the coin: tiny startups with zero funding, internal startups spun off inside larger organizations, and global banks and proprietary trading firms where billions of events moved daily. I have scaled engineering organizations across continents and shipped products from nothing with teams small enough to fit in a single room. I sat in the calibration meetings and defended the headcount. I maintained single-digit attrition in industries that actively poach. I mentored engineers to senior, staff, and lead roles. By every conventional measure, I was a successful engineering leader. And I was. Inside the system. The system is what\u2019s breaking.`,
 
   `Then I left and built four products from zero. Smallest teams I could assemble. Agentic AI harnesses, LLM-driven development workflows, no layers, no coordination overhead, no career ladders, no calibrations, no meetings about meetings about meetings. And I shipped faster, at higher quality, and learned more in nine months than in any comparable period of my career.`,
 
