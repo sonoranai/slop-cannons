@@ -1,4 +1,5 @@
 import { TitleBlock } from "@/components/title-block";
+import { DefinitionsPod } from "@/components/definitions-pod";
 import { SectionDivider } from "@/components/section-divider";
 import { SectionHeader } from "@/components/section-header";
 import { SocialLinks } from "@/components/social-links";
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="book-page max-w-[1120px] w-[94%] mx-auto px-[3%] pb-16">
         <article>
           <TitleBlock />
+          <DefinitionsPod />
           <SectionDivider />
           <SectionHeader>Preface</SectionHeader>
           <FictionalStory />
