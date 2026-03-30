@@ -5,7 +5,7 @@ export const SECTION_ONE = [
 
   `The PM had opened the sync with his usual bingo card. OKRs. KPIs. SLAs. A P0 that had been a P0 for six weeks and would remain a P0 for six more because naming a thing is not the same as fixing it. Eyes glossed before his first run-on sentence ended. Half the C-suite was on the call. Not the half that made decisions. The half that enjoyed watching the levels beneath them nod.`,
 
-  `Marc Aldrin sat in the third row. Coffee going cold. The mug was from GOTO Chicago in 2017, back when he still wrote code. He kept it the way someone keeps a photograph of a place they used to live.`,
+  `Marc Aldrin sat in the 3rd seat from the presenter at the head of the conference room. The tiled Zoom display of muted video feeds on the projector made every attendee look like a Lego person\u2014unrecognizable, silent\u2014attending because you had to or you would be viewed as unengaged. Engaged in what though? There was 3.8M worth of salary listening to what could have been an email with three bullet points. Marc\u2019s coffee was going cold. The mug was from GOTO Chicago in 2017, back when he still wrote code. He kept it the way someone keeps a photograph of a place they used to live.`,
 
   `He ran five engineering managers. Each of them ran five to ten engineers. Pipeline automation. Contact graph ingestion. Third-party integrations with every payments provider, marketing platform, and ERP that their enterprise clients demanded. Data residency compliance across forty countries with forty different privacy regimes, plus SOC 2 audits that nobody enjoyed and everybody needed. His teams\u2019 systems handled billions of messages daily and hadn\u2019t gone down in twenty-four months.`,
 
