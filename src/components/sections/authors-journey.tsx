@@ -8,7 +8,7 @@ import { SECTION_THREE } from "@/content/preface";
 export function AuthorsJourney() {
   return (
     <section>
-      <SectionHeader>The Journey</SectionHeader>
+      <SectionHeader>My Frame of Reference</SectionHeader>
       <BookText paragraphs={SECTION_THREE.slice(0, 2)} />
       <div className="my-[2em] md:my-[3em]">
         <CompressionTimeline />
