@@ -45,7 +45,7 @@ export const SECTION_ONE = [
 ];
 
 export const SECTION_TWO = [
-  `The stories in this book are fiction. They are drawn from real experience, mine and the people I have worked alongside for fifteen years. Some of it is exaggerated to prove a point, the way a golf instructor tells you to overcorrect until the movement feels absurd, because the real swing lives between the old habit and the overcorrection. The scenes are fiction. The patterns are documentary.`,
+  `The stories in this book are fiction. They are drawn from real experience, mine, good friends, and the incredible people I have worked alongside. It is exaggerated to prove a point, the way a golf instructor tells you to overcorrect until the movement feels absurd, because the real swing lives between the old habit and the overcorrection. The scenes are fiction. The patterns are documentary.`,
 
   `This is not a book about doom. It is not a book about AI replacing humans. It is not a prediction that engineering leadership is going away. Engineering leadership matters more now than it ever has. What is going away is the ceremony around it. The layers that masquerade as leadership. The title inflation that substitutes for impact. Strip those away and what remains is the real work: lifting an entire organization. Making a junior engineer dangerous. Making a non-technical expert a builder. Unlocking capability in people who were never given the tools or the trust to discover what they could do. AI enables this. Not fewer leaders. Better ones.`,
 
@@ -121,7 +121,7 @@ export const SECTION_FOUR = [
 
   `We made the machines elastic and the humans brittle. The career ladder persists not because it develops people but because it is how the organization sees itself. The structure is self-preserving. It will be compressed from outside, by economics, by tools, by the startups that prove it was never necessary. Or it will not be reformed at all.`,
 
-  `This book argues for the compression. Not downsizing. Resizing. An org that composes and decomposes around actual problems. That makes work legible through systems, not through layers of interpretation. Deployment frequency. SLO adherence. Error budgets. User adoption. The work speaks for itself when you build the systems to listen.`,
+  `This book argues for the compression. Not downsizing. Resizing. An org that composes and decomposes around actual problems and more importantly around massive latent value unlocks in the form of new products, features, and internal efficiencies. That makes work legible through systems, not through layers of interpretation. Deployment frequency. SLO adherence. Error budgets. User adoption. The work speaks for itself when you build the systems to listen.`,
 
   `That replaces the career ladder with visible, system-measured impact.`,
 
