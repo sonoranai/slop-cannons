@@ -23,7 +23,7 @@ export const SECTION_ONE = [
 
   `Marc listened with the weary attentiveness of a man who had heard many forecasts of clear skies while standing in floodwater. The DoE said the right things in the right order. The team needed to improve. Communication had to tighten. Ownership needed to be clearer. He did not say at what. He never did. Specificity would have required him to know what the teams were building, and knowing what the teams were building would have required him to attend a meeting that wasn\u2019t this one. He had a chief of staff who converted his abstractions into Jira epics and a calendar blocked with syncs he attended on mute. He requested headcount and asked the occasional question, always in front of the CTO, that proved he had read the executive summary of a document his chief of staff had summarized from a document an engineer had written.`,
 
-  `He was a director of nothing. He directed nothing. He was a layer.`,
+  `In many organizations, directors at this level operate as a firewall. Marc\u2019s Director of Engineering was no different. Inbound traffic from leadership passed through unfiltered\u2014every demand, every deadline, every mandate arrived at the engineering layer at full force. Outbound traffic was another matter. Deep packet inspection on every message headed upstream. Anything containing structural failure, inconvenient truth, or a request that would require real introspection from the layers above was silently dropped. The executive layer saw only clean, sanitized telemetry. Green dashboards. He existed at that boundary because the network architecture required a security appliance between the people who funded the work and the people who understood it.`,
 
   `There would be a retrospective next Wednesday.`,
 
@@ -87,7 +87,7 @@ export const SECTION_THREE = [
 
   `Here is how I came to see it.`,
 
-  `I did not arrive in software through the front gate. Before engineering, I spent years in sales. I studied finance in college. Dropped out. Watched older friends graduate with the same degree, land the jobs they were supposed to want, and loathe every hour of them while earning less than I was making on the phone. No reason to pay tuition to earn less.`,
+  `I did not arrive in software through the front gate. Before engineering, I spent years in sales. I studied finance in college. Dropped out. Watched older friends graduate with the same degree, land the jobs they were supposed to want, and loathe every hour of them while earning less than I was making being a proficient salesman. No reason to pay tuition to earn less.`,
 
   `So I sold. Inbound, outbound, the kind of selling that is ruthless about one thing: eventually, somebody has to receive something of value or the entire performance is exposed. You can hide behind vocabulary for a while. You can hide behind personality for a while. You cannot hide forever from the question of whether anything useful changed for the person on the other side of the table.`,
 
