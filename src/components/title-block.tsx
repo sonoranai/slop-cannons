@@ -25,7 +25,7 @@ export function TitleBlock() {
         className="flex items-center justify-center mt-[1em] text-[0.75em] md:text-[0.8em] font-medium uppercase tracking-[0.2em]"
         style={{ color: "rgba(28, 27, 25, 0.3)" }}
       >
-        <span className="text-right" style={{ minWidth: "7em" }}>Jason Neill</span>
+        <span className="text-right" style={{ minWidth: "9em" }}>Jason Neill @ <a href="https://sonoran.capital" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-200" style={{ color: "inherit", textDecoration: "none" }}>SCI</a></span>
         <span className="mx-[0.6em]">&middot;</span>
         <span className="text-left" style={{ minWidth: "7em" }}>March 29, 2026</span>
       </div>

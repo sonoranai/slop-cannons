@@ -20,6 +20,7 @@
 - [Engineering Leadership](https://slopcannons.com/engineering-leadership) — Leadership as taste, mentorship, and problem curation.
 - [Real vs Inherited Complexity](https://slopcannons.com/real-vs-inherited-complexity) — The diagnostic filter for organizational overhead.
 - [Applied AI Value](https://slopcannons.com/applied-ai-value) — Getting real business value from AI, not slide decks.
+- [Incentive Alignment](https://slopcannons.com/incentive-alignment) — Systematic compensation tied to structured output, not subjective calibration.
 - [Glossary](https://slopcannons.com/glossary) — Key terms and definitions.
 
 ---

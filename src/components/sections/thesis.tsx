@@ -7,6 +7,7 @@ import { SECTION_FOUR } from "@/content/preface";
 
 const linksFirst: LinkMapping[] = [
   { text: "Expert Scalers and Slop Cannons", href: "/fire-team-model" },
+  { text: "you create a team of value-seeking missiles", href: "/incentive-alignment" },
 ];
 
 const linksSecond: LinkMapping[] = [
@@ -19,11 +20,11 @@ export function Thesis() {
   return (
     <section>
       <SectionHeader>The Solution</SectionHeader>
-      <BookText paragraphs={SECTION_FOUR.slice(0, 9)} links={linksFirst} />
+      <BookText paragraphs={SECTION_FOUR.slice(0, 11)} links={linksFirst} />
       <div className="my-[2em] md:my-[3em]">
         <FireTeam />
       </div>
-      <BookText paragraphs={SECTION_FOUR.slice(9)} links={linksSecond} />
+      <BookText paragraphs={SECTION_FOUR.slice(11)} links={linksSecond} />
     </section>
   );
 }

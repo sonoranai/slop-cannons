@@ -85,7 +85,7 @@ export default function Home() {
           <SectionDivider />
           <Thesis />
           <SectionDivider />
-          <aside className="text-center">
+          <aside>
             <p style={{ color: "rgba(28, 27, 25, 0.5)" }}>
               <a
                 href="https://sonoran.capital"

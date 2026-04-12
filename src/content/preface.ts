@@ -131,6 +131,10 @@ export const SECTION_FOUR = [
 
   `Not anarchy. Orchestration.`,
 
+  `Alignment follows structure. When a fire team describes its own output against defined facets -- did this expand the quality or quantity of external products? Internal tools? Did it generate compounding business intelligence that did not exist before? -- you create an exhaust that captures effort in terms the business can evaluate. That exhaust replaces the middle manager\u2019s subjective interpretation of who contributed what. The evaluation becomes deterministic. The subjectivity drops out.`,
+
+  `Build incentives on that exhaust and you create a team of value-seeking missiles. Every person, at every level, aligned to the same question: did this move the needle? Malinvestment -- the hierarchical instinct to expand scope and headcount without generating material impact on equity valuation or revenue -- becomes visible and accountable. The old career ladder rewarded accumulation. The compressed org rewards creation.`,
+
   `A compressed system still needs leadership, but a different kind. Not endless translators. Not custodians of abstraction. High-context, low-drama leaders who hold context across moving efforts, route talent toward consequential problems, resolve conflicts quickly, and maintain coherence without rebuilding bureaucracy as a coping mechanism. The person who understands the work talks to the person who funds the work. Everything between them is overhead.`,
 
   `The days of ceremonial, esoteric knowledge are ending. The cost of knowledge is approaching zero. What cannot be automated is the ability to look at a system and know what doesn\u2019t need to be built at all. Systems design over vertical trivia. Latticed skill over narrow expertise. The person you want on your fire team, you will know them not by how quickly they implement code but by how quickly they identify the code that doesn\u2019t need to be written.`,
