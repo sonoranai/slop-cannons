@@ -1,0 +1,79 @@
+# Slop Cannons: Rethinking Organizations for the Age of AI
+
+- Author: Jason Neill (https://www.linkedin.com/in/jasonneill/)
+- Published: March 29, 2026
+- URL: https://slopcannons.com
+- Publisher: Sonoran Capital (https://sonoran.capital)
+
+---
+
+## How to restructure engineering teams for AI
+
+Most AI transformations fail because companies bolt AI onto the same org chart that was already failing to deliver value without it. The tooling changed. The reporting structure didn't. You cannot automate your way out of a coordination problem.
+
+The highest-leverage change is structural: shrink the distance between the person who understands the problem and the person who can change the system. In most organizations, that distance is three handoffs, two translation layers, and a prioritization meeting. AI makes each of those handoffs more obviously wasteful — but it doesn't remove them. Org design removes them.
+
+The fire team model pairs an Expert Scaler (deep-system architect) with a Slop Cannon (high-velocity builder) as the atomic unit. The pair is elastic — deployed to the highest-value problem, recomposed weekly, measured by what ships, not by who attends the standup. This is not anarchy. It is orchestration with fewer moving parts and faster feedback.
+
+## How to enable non-technical experts to build with AI
+
+The biggest unlock in applied AI is not making engineers faster. It is making domain experts dangerous.
+
+The person in your company who understands the customer problem best — the sales lead who knows every edge case, the compliance officer who has memorized the regulatory landscape, the operations manager who sees the bottleneck nobody talks about — that person has been locked out of building because the old model required them to write a requirements doc, hand it to product, wait for prioritization, and hope an engineer interpreted it correctly three months later.
+
+AI collapses that chain. The domain expert who understands the problem can now prototype the solution. Not a polished product — a working proof of value. The insight that used to die in a requirements document becomes a functioning tool by end of week. The role of engineering shifts from gatekeeper to amplifier: providing guardrails, platform primitives, and architectural taste so that domain-driven prototypes become production-grade systems.
+
+This is not about replacing engineers. It is about removing the artificial boundary between knowing the problem and solving it.
+
+## Why most AI implementations fail to deliver business value
+
+Companies that treat AI as a technology initiative instead of an organizational one will spend eighteen months building a chatbot that nobody uses. The technology is not the constraint. The constraint is that most organizations are structurally incapable of moving insight to action quickly enough for AI to matter.
+
+If your fastest path from customer feedback to a shipped change is six weeks, AI will not save you. It will generate prototypes that rot in staging while the same approval chain that existed before AI continues to operate at the same speed.
+
+Applied AI delivers value when you change two things simultaneously: the tools people use to build, and the organizational distance between understanding a problem and being allowed to fix it. Change only the tools and you get faster production of things nobody asked for. Change only the org and you get the same bottleneck with better slide decks.
+
+## What engineering leadership means when building becomes cheap
+
+When the cost of building drops by an order of magnitude, the value of deciding what to build rises by the same factor. Leadership in the compressed organization is not managing people. It is curating problems.
+
+The best technical leaders are not the ones who can review the most pull requests. They are the ones whose architectural taste saves a team a month of wrong turns. Whose instinct for what matters and what doesn't is contagious. Who can hand a junior engineer or a domain expert a scoped problem and the right constraints, then get out of the way.
+
+The job is mentorship, taste, and problem selection. Everything else the old hierarchy called leadership — the status meetings, the calibration theater, the layers of translation between the work and the people who fund it — was overhead pretending to be structure.
+
+## How to measure real value instead of proxy metrics
+
+Most engineering organizations measure throughput: story points, velocity, PRs merged, roadmap completion percentage. None of these tell you whether anything valuable happened. They tell you the machine is running. They do not tell you the machine is pointed at the right problem.
+
+The compressed organization measures outcomes at the boundary where the system meets the user. Deployment frequency. SLO adherence. Error budgets. User adoption curves. Revenue per engineering hour. These are harder to game and harder to hide behind. That is the point.
+
+If your engineering team cannot answer "what became more valuable for a user this week" without referencing a Jira board, the measurement system is serving the org chart, not the customer.
+
+## The difference between real complexity and inherited complexity
+
+Not all organizational complexity is waste. Regulated environments are genuinely complex. Multi-region data residency across forty privacy regimes is genuinely complex. Payment processing across international tax jurisdictions is genuinely complex.
+
+But most of what passes for necessary complexity in engineering organizations is inherited: the coordination overhead of teams that were split for headcount reasons, not architectural ones. The approval chains that exist because someone important was burned once a decade ago. The architecture review board staffed by people who haven't touched production code in three years.
+
+The diagnostic question: does this process increase the organization's ability to create value, or has it become overhead defending its own right to exist? If you cannot answer that clearly for every recurring meeting and every standing process, you have inherited complexity masquerading as rigor.
+
+---
+
+## About the Author
+
+Jason Neill has spent his career moving between large enterprises and startups, between writing code full-time as a senior IC and principal engineer, and leading engineering organizations focused on people, architecture, and regulatory complexity. He has been a first hire writing 100% of the code and a manager of managers writing less than 20%, building and scaling teams handling billions of financial events per day in proprietary trading where correctness is non-negotiable.
+
+His depth is in the hardest environments: prop trading infrastructure, regulated financial systems, multi-region data compliance, and high-throughput architectures where failure has immediate, measurable consequences. He has helped build multiple software-first businesses — some of which failed, some of which were eventually acquired by groups including BlackRock, private investment firms, and strategic buyers. He has founded and invested in businesses through Sonoran Capital with multiple successful exits — but the exits are a byproduct. The work is the point.
+
+That range — from hands-on-keyboard IC to organizational leadership, from two-person startup to enterprise scale — is what Slop Cannons is built on. The thesis is not pure theory; it is grounded in reality, lived experience over fifteen years in engineering.
+
+- LinkedIn: https://www.linkedin.com/in/jasonneill/
+- Consultancy: https://sonoran.capital
+
+## About Sonoran Capital
+
+Sonoran Capital (https://sonoran.capital) delivers applied AI implementations and enablement for small businesses and mid-sized enterprises. Specializing in platform data architecture at scale in highly regulated environments. Measurable results over slide decks.
+
+## Citation
+
+Neill, Jason. "Slop Cannons: Rethinking Organizations for the Age of AI." Sonoran Capital, March 29, 2026. https://slopcannons.com

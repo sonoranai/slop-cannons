@@ -17,7 +17,8 @@
       "Bash(grep -c '^\\\\s*`' /Users/jasonneill/Code/production/slop-cannons/src/content/preface.ts)",
       "Bash(curl -s http://localhost:3333)",
       "WebFetch(domain:slopcannons.com)",
-      "WebFetch(domain:chenglou.me)"
+      "WebFetch(domain:chenglou.me)",
+      "mcp__pal__thinkdeep"
     ]
   }
 }

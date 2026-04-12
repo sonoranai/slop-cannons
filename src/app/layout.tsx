@@ -11,6 +11,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "SLOP CANNONS",
+  alternates: {
+    types: {
+      "text/plain": "https://slopcannons.com/llms.txt",
+    },
+  },
   description:
     "Most engineering orgs are built to explain work, not to do it. A blueprint for putting the people who understand the problem in the builder\u2019s seat.",
   authors: [{ name: "Jason Neill", url: "https://www.linkedin.com/in/jasonneill/" }],
