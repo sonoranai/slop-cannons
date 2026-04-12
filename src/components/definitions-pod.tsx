@@ -35,7 +35,9 @@ export function DefinitionsPod() {
             padding: "1.2em 1.4em",
           }}
         >
-          <p style={{ fontSize: "0.85em", fontWeight: 600 }}>Expert Scaler</p>
+          <p style={{ fontSize: "0.85em", fontWeight: 600 }}>
+            <a href="/expert-scaler" style={{ color: "inherit", textDecoration: "none" }} className="hover:opacity-70 transition-opacity duration-200">Expert Scaler</a>
+          </p>
           <div
             style={{
               height: "1px",
@@ -73,7 +75,9 @@ export function DefinitionsPod() {
             padding: "1.2em 1.4em",
           }}
         >
-          <p style={{ fontSize: "0.85em", fontWeight: 600 }}>Slop Cannon</p>
+          <p style={{ fontSize: "0.85em", fontWeight: 600 }}>
+            <a href="/slop-cannon" style={{ color: "inherit", textDecoration: "none" }} className="hover:opacity-70 transition-opacity duration-200">Slop Cannon</a>
+          </p>
           <div
             style={{
               height: "1px",

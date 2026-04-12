@@ -5,13 +5,23 @@ import {
   useState,
   useEffect,
   useCallback,
+  type ReactNode,
 } from "react";
 import { prepareWithSegments, layoutNextLine } from "@chenglou/pretext";
+
+export interface LinkMapping {
+  text: string;
+  href: string;
+}
 
 interface RenderedLine {
   text: string;
   x: number;
   y: number;
+  /** Character offset of this line within its source paragraph */
+  charOffset: number;
+  /** Index of the source paragraph */
+  paragraphIndex: number;
 }
 
 /**
@@ -38,10 +48,128 @@ export interface ContourFloat {
 interface BookTextProps {
   paragraphs: string[];
   float?: ContourFloat;
+  links?: LinkMapping[];
   className?: string;
 }
 
-export function BookText({ paragraphs, float, className }: BookTextProps) {
+/** A range within a paragraph where a link exists */
+interface LinkRange {
+  start: number;
+  end: number;
+  href: string;
+}
+
+/** Pre-compute all link ranges for each paragraph */
+function buildLinkRanges(
+  paragraphs: string[],
+  links: LinkMapping[]
+): LinkRange[][] {
+  return paragraphs.map((para) => {
+    const ranges: LinkRange[] = [];
+    for (const link of links) {
+      let searchFrom = 0;
+      while (true) {
+        const idx = para.indexOf(link.text, searchFrom);
+        if (idx === -1) break;
+        ranges.push({ start: idx, end: idx + link.text.length, href: link.href });
+        searchFrom = idx + link.text.length;
+      }
+    }
+    // Sort by start position so rendering is ordered
+    ranges.sort((a, b) => a.start - b.start);
+    return ranges;
+  });
+}
+
+const linkStyle: React.CSSProperties = {
+  color: "rgba(42, 74, 127, 0.6)",
+  textDecoration: "none",
+  transition: "opacity 200ms",
+};
+
+/** Render a line's text with inline links where ranges overlap */
+function renderLineWithLinks(
+  lineText: string,
+  lineCharOffset: number,
+  linkRanges: LinkRange[]
+): ReactNode {
+  if (linkRanges.length === 0) return lineText;
+
+  const lineStart = lineCharOffset;
+  const lineEnd = lineCharOffset + lineText.length;
+
+  // Find ranges that overlap this line
+  const overlapping = linkRanges.filter(
+    (r) => r.start < lineEnd && r.end > lineStart
+  );
+  if (overlapping.length === 0) return lineText;
+
+  const segments: ReactNode[] = [];
+  let cursor = 0; // position within lineText
+
+  for (const range of overlapping) {
+    // Clamp range to this line's boundaries
+    const rangeStartInLine = Math.max(0, range.start - lineStart);
+    const rangeEndInLine = Math.min(lineText.length, range.end - lineStart);
+
+    // Text before this link
+    if (rangeStartInLine > cursor) {
+      segments.push(lineText.slice(cursor, rangeStartInLine));
+    }
+
+    // The linked text
+    segments.push(
+      <a
+        key={`${range.start}-${range.href}`}
+        href={range.href}
+        style={linkStyle}
+        className="hover:opacity-70"
+      >
+        {lineText.slice(rangeStartInLine, rangeEndInLine)}
+      </a>
+    );
+
+    cursor = rangeEndInLine;
+  }
+
+  // Remaining text after last link
+  if (cursor < lineText.length) {
+    segments.push(lineText.slice(cursor));
+  }
+
+  return segments;
+}
+
+/** Render a paragraph's text with inline links for the sr-only fallback */
+function renderParagraphWithLinks(
+  paraText: string,
+  linkRanges: LinkRange[]
+): ReactNode {
+  if (linkRanges.length === 0) return paraText;
+
+  const segments: ReactNode[] = [];
+  let cursor = 0;
+
+  for (const range of linkRanges) {
+    if (range.start > cursor) {
+      segments.push(paraText.slice(cursor, range.start));
+    }
+    segments.push(
+      <a key={`sr-${range.start}-${range.href}`} href={range.href}>
+        {paraText.slice(range.start, range.end)}
+      </a>
+    );
+    cursor = range.end;
+  }
+
+  if (cursor < paraText.length) {
+    segments.push(paraText.slice(cursor));
+  }
+
+  return segments;
+}
+
+export function BookText({ paragraphs, float, links, className }: BookTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<RenderedLine[]>([]);
   const [totalHeight, setTotalHeight] = useState(0);
@@ -70,6 +198,7 @@ export function BookText({ paragraphs, float, className }: BookTextProps) {
     for (let p = 0; p < paragraphs.length; p++) {
       const prepared = prepareWithSegments(paragraphs[p], fontString);
       let cursor = { segmentIndex: 0, graphemeIndex: 0 };
+      let charOffset = 0;
 
       while (true) {
         let availableWidth = containerWidth;
@@ -98,7 +227,14 @@ export function BookText({ paragraphs, float, className }: BookTextProps) {
         const line = layoutNextLine(prepared, cursor, availableWidth);
         if (line === null) break;
 
-        allLines.push({ text: line.text, x, y });
+        allLines.push({
+          text: line.text,
+          x,
+          y,
+          charOffset,
+          paragraphIndex: p,
+        });
+        charOffset += line.text.length;
         cursor = line.end;
         y += lineHeight;
       }
@@ -129,6 +265,7 @@ export function BookText({ paragraphs, float, className }: BookTextProps) {
   }, [doLayout]);
 
   const lh = lineHeightRef.current;
+  const allLinkRanges = links ? buildLinkRanges(paragraphs, links) : null;
 
   return (
     <div
@@ -143,14 +280,22 @@ export function BookText({ paragraphs, float, className }: BookTextProps) {
       {!ready ? (
         <div style={{ display: "flex", flexDirection: "column", gap: `${paragraphGapRef.current}px` }}>
           {paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i}>
+              {allLinkRanges
+                ? renderParagraphWithLinks(p, allLinkRanges[i])
+                : p}
+            </p>
           ))}
         </div>
       ) : (
         <>
           <div className="sr-only">
             {paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p key={i}>
+                {allLinkRanges
+                  ? renderParagraphWithLinks(p, allLinkRanges[i])
+                  : p}
+              </p>
             ))}
           </div>
 
@@ -187,7 +332,13 @@ export function BookText({ paragraphs, float, className }: BookTextProps) {
                 zIndex: 0,
               }}
             >
-              {line.text}
+              {allLinkRanges
+                ? renderLineWithLinks(
+                    line.text,
+                    line.charOffset,
+                    allLinkRanges[line.paragraphIndex]
+                  )
+                : line.text}
             </span>
           ))}
         </>

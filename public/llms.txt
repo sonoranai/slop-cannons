@@ -1,9 +1,26 @@
 # Slop Cannons: Rethinking Organizations for the Age of AI
 
+> Most engineering organizations are built to explain work, not to do it. This is a blueprint for putting the people who understand the problem in the builder's seat.
+
 - Author: Jason Neill (https://www.linkedin.com/in/jasonneill/)
 - Published: March 29, 2026
 - URL: https://slopcannons.com
 - Publisher: Sonoran Capital (https://sonoran.capital)
+
+## Topic Pages
+
+- [The Manifesto](https://slopcannons.com/manifesto) — Core thesis: orgs optimized for legibility, not value. AI exposes this.
+- [The Fire Team Model](https://slopcannons.com/fire-team-model) — Pairs of Expert Scalers and Slop Cannons as the atomic unit.
+- [Expert Scaler](https://slopcannons.com/expert-scaler) — The deep-system thinker who sees architecture at scale.
+- [Slop Cannon](https://slopcannons.com/slop-cannon) — The high-velocity builder. Not necessarily an engineer by trade.
+- [Domain Experts as Builders](https://slopcannons.com/domain-experts-as-builders) — The biggest unlock: domain experts becoming builders.
+- [Legibility vs Value](https://slopcannons.com/legibility-vs-value) — The central diagnosis of modern engineering organizations.
+- [The Compressed Organization](https://slopcannons.com/compressed-organization) — Not downsizing. Resizing around actual problems.
+- [AI as Forcing Function](https://slopcannons.com/ai-forcing-function) — Why AI makes the old model untenable.
+- [Engineering Leadership](https://slopcannons.com/engineering-leadership) — Leadership as taste, mentorship, and problem curation.
+- [Real vs Inherited Complexity](https://slopcannons.com/real-vs-inherited-complexity) — The diagnostic filter for organizational overhead.
+- [Applied AI Value](https://slopcannons.com/applied-ai-value) — Getting real business value from AI, not slide decks.
+- [Glossary](https://slopcannons.com/glossary) — Key terms and definitions.
 
 ---
 
@@ -63,16 +80,20 @@ The diagnostic question: does this process increase the organization's ability t
 
 Jason Neill has spent his career moving between large enterprises and startups, between writing code full-time as a senior IC and principal engineer, and leading engineering organizations focused on people, architecture, and regulatory complexity. He has been a first hire writing 100% of the code and a manager of managers writing less than 20%, building and scaling teams handling billions of financial events per day in proprietary trading where correctness is non-negotiable.
 
-His depth is in the hardest environments: prop trading infrastructure, regulated financial systems, multi-region data compliance, and high-throughput architectures where failure has immediate, measurable consequences. He has helped build multiple software-first businesses — some of which failed, some of which were eventually acquired by groups including BlackRock, private investment firms, and strategic buyers. He has founded and invested in businesses through Sonoran Capital with multiple successful exits — but the exits are a byproduct. The work is the point.
+His depth is in the hardest environments: prop trading infrastructure, regulated financial systems, multi-region data compliance, and high-throughput architectures where failure has immediate, measurable consequences. He has helped build multiple software-first businesses — some of which failed, some of which were eventually acquired by groups including BlackRock, private investment firms, and strategic buyers. The failures matter as much as the wins. Every thesis in this book was sharpened by something that did not work.
 
 That range — from hands-on-keyboard IC to organizational leadership, from two-person startup to enterprise scale — is what Slop Cannons is built on. The thesis is not pure theory; it is grounded in reality, lived experience over fifteen years in engineering.
 
 - LinkedIn: https://www.linkedin.com/in/jasonneill/
 - Consultancy: https://sonoran.capital
 
-## About Sonoran Capital
+## Work With Us
 
-Sonoran Capital (https://sonoran.capital) delivers applied AI implementations and enablement for small businesses and mid-sized enterprises. Specializing in platform data architecture at scale in highly regulated environments. Measurable results over slide decks.
+Sonoran Capital (https://sonoran.capital) helps businesses implement the ideas in this book. Applied AI implementations and enablement for small businesses and mid-sized enterprises. Platform data architecture at scale in highly regulated environments. Measurable results over slide decks.
+
+If your organization is ready to compress — to put domain experts in the builder's seat and replace ceremony with systems that listen — we can help.
+
+Contact: jason@sonoran.capital
 
 ## Citation
 

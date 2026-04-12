@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Slop Cannons</title>
+    <link>https://slopcannons.com</link>
+    <description>Rethinking Organizations for the Age of AI. Most engineering orgs are built to explain work, not to do it. A blueprint for putting the people who understand the problem in the builder's seat.</description>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://slopcannons.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <dc:creator>Jason Neill</dc:creator>
+    <item>
+      <title>SLOP CANNONS: Rethinking Organizations for the Age of AI</title>
+      <link>https://slopcannons.com/</link>
+      <guid isPermaLink="true">https://slopcannons.com/</guid>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Most engineering orgs are built to explain work, not to do it. A blueprint for putting the people who understand the problem in the builder's seat.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>The Manifesto — Slop Cannons</title>
+      <link>https://slopcannons.com/manifesto</link>
+      <guid isPermaLink="true">https://slopcannons.com/manifesto</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The core thesis: most engineering organizations are optimized for legibility to leadership, not value to users. AI exposes this. The compressed org is the answer.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>The Fire Team Model — Slop Cannons</title>
+      <link>https://slopcannons.com/fire-team-model</link>
+      <guid isPermaLink="true">https://slopcannons.com/fire-team-model</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Pairs of Expert Scalers and Slop Cannons as the atomic unit of the compressed org. Elastic, deployed to the highest-value problem, recomposed weekly.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Expert Scaler — Slop Cannons</title>
+      <link>https://slopcannons.com/expert-scaler</link>
+      <guid isPermaLink="true">https://slopcannons.com/expert-scaler</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The deep-system thinker who sees architecture at scale and identifies what doesn't need to be built at all.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Slop Cannon — Slop Cannons</title>
+      <link>https://slopcannons.com/slop-cannon</link>
+      <guid isPermaLink="true">https://slopcannons.com/slop-cannon</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The high-velocity builder. Not necessarily an engineer by trade. Ships creative, working MVPs fast. AI tools meet them where they are.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Domain Experts as Builders — Slop Cannons</title>
+      <link>https://slopcannons.com/domain-experts-as-builders</link>
+      <guid isPermaLink="true">https://slopcannons.com/domain-experts-as-builders</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The biggest unlock in applied AI: domain experts from sales, finance, and operations becoming builders, not advisors.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Legibility vs Value — Slop Cannons</title>
+      <link>https://slopcannons.com/legibility-vs-value</link>
+      <guid isPermaLink="true">https://slopcannons.com/legibility-vs-value</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The central diagnosis: engineering organizations optimized for being intelligible to leadership before being useful to users.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>The Compressed Organization — Slop Cannons</title>
+      <link>https://slopcannons.com/compressed-organization</link>
+      <guid isPermaLink="true">https://slopcannons.com/compressed-organization</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Not downsizing. Resizing. An org that composes and decomposes around actual problems and makes work legible through systems, not layers.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>AI as Forcing Function — Slop Cannons</title>
+      <link>https://slopcannons.com/ai-forcing-function</link>
+      <guid isPermaLink="true">https://slopcannons.com/ai-forcing-function</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>AI doesn't create new organizational problems. It makes existing ones impossible to ignore. When building becomes cheap, coordination overhead becomes visible.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Engineering Leadership — Slop Cannons</title>
+      <link>https://slopcannons.com/engineering-leadership</link>
+      <guid isPermaLink="true">https://slopcannons.com/engineering-leadership</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>When the cost of building drops, leadership becomes taste, mentorship, and problem curation. Not people management. Not ceremony.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Real vs Inherited Complexity — Slop Cannons</title>
+      <link>https://slopcannons.com/real-vs-inherited-complexity</link>
+      <guid isPermaLink="true">https://slopcannons.com/real-vs-inherited-complexity</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The diagnostic filter: does this process increase the org's ability to create value, or has it become overhead defending its right to exist?</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Applied AI Value — Slop Cannons</title>
+      <link>https://slopcannons.com/applied-ai-value</link>
+      <guid isPermaLink="true">https://slopcannons.com/applied-ai-value</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Getting real business value from AI requires changing tools and org design simultaneously. Change only one and you get faster production of things nobody asked for.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+    <item>
+      <title>Glossary — Slop Cannons</title>
+      <link>https://slopcannons.com/glossary</link>
+      <guid isPermaLink="true">https://slopcannons.com/glossary</guid>
+      <pubDate>Sat, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Key terms and definitions from Slop Cannons: fire teams, Expert Scalers, Slop Cannons, the compression, legibility vs value, and more.</description>
+      <dc:creator>Jason Neill</dc:creator>
+    </item>
+  </channel>
+</rss>

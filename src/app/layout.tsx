@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     types: {
       "text/plain": "https://slopcannons.com/llms.txt",
+      "application/rss+xml": "https://slopcannons.com/feed.xml",
     },
   },
   description:
