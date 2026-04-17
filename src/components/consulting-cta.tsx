@@ -25,7 +25,7 @@ export function ConsultingCTA() {
           className="hover:opacity-70 transition-opacity duration-200"
           style={{ color: "rgba(42, 74, 127, 0.7)", textDecoration: "none" }}
         >
-          Chat with a founder
+          Chat with the founder
         </a>
         {" "}of SCI.
       </p>
