@@ -2,7 +2,7 @@ export const TOPIC_META = {
   title: "The Compressed Organization",
   subtitle: "Not Downsizing. Resizing.",
   description:
-    "Work made legible through systems, not layers. Measurement read by the pair that produced it. Coordination, not engineering, is now the dominant line item. The old ratio was rational. The new one isn't.",
+    "What a compressed org is, what it is not (flat hierarchy, Scrum, or Spotify), the costs it asks you to absorb, and how the measurement system and coordination math actually work in practice.",
   slug: "compressed-organization",
   keywords: [
     "compressed organization",
@@ -11,7 +11,6 @@ export const TOPIC_META = {
     "organizational compression",
     "deployment frequency metrics",
     "SLO adherence",
-    "error budgets",
     "coordination cost",
     "engineering org reform",
   ],
@@ -24,9 +23,31 @@ export const TOPIC_PARAGRAPHS = [
 
   `A compressed org applies to people what we already apply to infrastructure. Compose and decompose around the problem in front of you. Not a reorg. A capability. The organization knows how to be the right size for the work this week without waiting for approval to change shape next quarter.`,
 
-  `Pairs form. Pairs dissolve. Two people, one problem, a week or two of focus, then recomposed against the next highest-value thing on the queue. The team is not the unit. The pair is. Streams of practice: payments, data, security, interface. Water the pairs swim through, not departments they belong to.`,
+  `Worth saying what this is not.`,
+
+  `Not a flat hierarchy. Flat hierarchies still have fixed headcount and usually fixed teams. They push the coordination problem sideways instead of up. Compression is about the elasticity of the unit, not the number of layers above it.`,
+
+  `Not agile or Scrum. Scrum keeps a stable team sprinting on a stable backlog. The compressed org keeps the work stable and lets the people moving across it change every week.`,
+
+  `Not Spotify's squad-tribe-chapter-guild model. That model keeps tribes and chapters as durable structural artifacts. In the compressed org, streams of practice like payments, data, security, and interface are water the practitioners swim through, not containers they belong to.`,
+
+  `Pairs form. Pairs dissolve. Two people, one problem, a week or two of focus, then recomposed against the next highest-value thing on the queue. The team is not the unit. The pair is. Streams give continuity of context without locking people inside a box.`,
 
   `Not downsizing. Resizing.`,
+
+  `There is a cost. An honest argument for compression names it.`,
+
+  `You lose the emotional stability of "my team." Some people do their best work when the faces around them have been the same for two years. Compression gives them a new pairing every two weeks. Not everyone thrives in that, and no amount of rhetoric will make it otherwise.`,
+
+  `Career-ladder clarity goes with it. The compressed org replaces the ladder with visible, system-measured impact. For a practitioner who wants to know what to work on this year to make staff next year, "ship higher-value work with better pattern recognition" is a less comfortable answer than "lead three projects and mentor two reports."`,
+
+  `Routing gets harder. Leadership does not go away. It changes shape and increases in difficulty. Somebody decides every Monday which pair goes where, which stream is stale, which problem is the highest-leverage thing on the queue. That job replaces the job of running calibrations, and it is not less work, it is different work.`,
+
+  `Practitioners need higher operating maturity. Two people shipping without a PM, without an EM, without a standing review cadence, have to self-govern, write their own briefs, and hand off without a ceremony. That skill is not what traditional orgs train for.`,
+
+  `Trust infrastructure has to replace the narrative infrastructure the layers provided. If leadership cannot read a status deck, leadership has to trust the telemetry. If the telemetry is wrong or thin, the compression fails and a new layer grows back in under a quarter.`,
+
+  `The balance is not "compress everything." Some work benefits from stable teams. A 24/7 on-call rotation with complex context-dependence does not want a weekly reshuffle. A new engineer learning the stack does not want to be thrown into the elastic pool on day one. Deep stream expertise sometimes wants the same pair for a quarter, not a week. Compression is a default, not a law. The honest question is which work actually compresses, and the answer is usually more than a traditional org assumes and less than a compression enthusiast assumes.`,
 
   `Work becomes legible through the system itself, not through a manager telling the story of it in a standup. Deploys land or they don't. SLO burn is green or it isn't. An error budget, once spent, is gone. The pair reads its own telemetry in a fifteen-minute Monday. Nobody above the pair reviews the numbers, because the numbers are already public. Error budget exhausted auto-pauses feature work. Hard rule, not suggestion. The pair that ships nine times in a week against a 99.9% SLO with budget to spare needs no narrator. The pair that ships twice with two SEV-2s needs no narrator either. The system already told the story.`,
 
@@ -38,7 +59,7 @@ export const TOPIC_PARAGRAPHS = [
 
   `This structure will not reform itself. The layers that need to be compressed are the same layers that approve org changes. The budgets are controlled by the roles that would be cut. So the compression comes from outside. Economics that punish the slow. Tools that expose the overhead. Competitors who prove it was never necessary. The best builders leaving for environments where the ratio of making to narrating favors making.`,
 
-  `Here is the math. In the old world, a medium feature cost roughly $400k of engineering time. Coordination cost about $40k. Product managers, engineering managers, calibrations, review boards, release trains. Spending ten percent on coordination was rational. It was insurance against a mistake that would cost more.`,
+  `Here is the math. In the old world, a medium feature cost roughly $400k of engineering time. Coordination cost about $40k. Product managers, engineering managers, calibrations, review boards, release trains. Spending ten percent on coordination was rational. It was insurance against a mistake that would have cost more.`,
 
   `In the new world the same feature costs $40k of engineering plus AI. Coordination still costs $40k. Fifty percent of the total. The single largest line item in the org.`,
 
