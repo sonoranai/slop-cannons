@@ -2,7 +2,7 @@ export const TOPIC_META = {
   title: "Domain Experts as Builders",
   subtitle: "The Biggest Unlock in Applied AI",
   description:
-    "What qualifies somebody as a domain expert, and why pairing one with AI produces 'minimum valuable products' that traditional discovery can't match. A named vignette of a compliance analyst shipping in an afternoon, plus what the pattern costs in production risk, governance, and engineering identity.",
+    "What qualifies somebody as a domain expert, and why pairing one with AI produces a Minimum Valuable Project (MVaP) that traditional discovery can't match. A named vignette of a compliance analyst shipping in an afternoon, plus what the pattern costs in production risk, governance, and engineering identity.",
   slug: "domain-experts-as-builders",
   keywords: [
     "domain experts building software",
@@ -10,7 +10,7 @@ export const TOPIC_META = {
     "citizen development",
     "low-code no-code",
     "engineering as amplifier",
-    "minimum valuable product",
+    "Minimum Valuable Project",
     "applied AI organization",
     "domain-driven development",
   ],
@@ -43,7 +43,7 @@ export const TOPIC_PARAGRAPHS = [
 
   `The economic logic is straightforward. In the old model, every business problem had to pass through a translation chain. Domain expert describes the problem to a product manager. Product manager writes a spec. Spec goes to engineering. Engineering interprets the spec, builds something, ships it, and the domain expert says that is not quite right. Three months and six handoffs to learn something the domain expert could have demonstrated in an afternoon. Each handoff loses fidelity. Each layer adds latency. The chain is not malicious. It is expensive, and AI makes the expense visible by showing what happens when you skip it.`,
 
-  `What gets built is not a minimum viable product in the usual sense. It is a minimum valuable product. The distinction matters. An MVP built by someone who does not understand the domain tests the wrong assumption half the time. A minimum valuable product built by the person who has lived inside the problem hits the right assumption on the first try more often than any discovery interview.`,
+  `What gets built is not a minimum viable product in the usual sense. It is a Minimum Valuable Project (MVaP). The distinction matters. An MVP built by someone who does not understand the domain tests the wrong assumption half the time. An MVaP, built by the person who has lived inside the problem, hits the right assumption on the first try more often than any discovery interview.`,
 
   `They do not need to discover the user's pain. They are the user. They have the pain.`,
 

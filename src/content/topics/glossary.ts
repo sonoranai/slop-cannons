@@ -75,7 +75,7 @@ export const GLOSSARY_ENTRIES: {
     term: "Slop Cannon",
     cluster: "The Structure",
     definition:
-      "Ships rough, fast, in public. A creative waterfall, often from outside engineering, unburdened by what the stack supposedly cannot do. The lack of deep technical knowledge is part of what makes them valuable. Paired with an Expert Scaler who keeps the ideas from dying on first contact with production.",
+      "Ships rough, fast, in public. A creative waterfall, often from outside engineering or an early-career engineer with subject-matter expertise, unburdened by what the stack supposedly cannot do. The lack of deep technical knowledge is part of what makes them valuable. Paired with an Expert Scaler who keeps the ideas from dying on first contact with production.",
     link: "/slop-cannon",
   },
   {
@@ -139,6 +139,12 @@ export const GLOSSARY_ENTRIES: {
   },
 
   // The Mechanics
+  {
+    term: "Minimum Valuable Project (MVaP)",
+    cluster: "The Mechanics",
+    definition:
+      "The smallest shape of work that delivers real user value. Not the smallest thing that can ship. The smallest thing worth shipping. An Expert Scaler and a Slop Cannon orient every pairing around finding it and delivering it before the calendar runs out.",
+  },
   {
     term: "Structured Exhaust",
     cluster: "The Mechanics",

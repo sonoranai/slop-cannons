@@ -46,7 +46,7 @@ export function DefinitionsPod() {
             }}
           />
           <p style={{ fontSize: "0.65em", lineHeight: 1.75, color: "rgba(28, 27, 25, 0.4)" }}>
-            Deep-system thinker. Sees architecture at scale. Works with the SC to identify the most tractable, highest-value problem to solve. Shepherds the most valuable products into the engineering organization for long-term support and scaling of architecture.
+            Deep-system thinker. Holds the architecture in their head and knows what should not be built. Identifies, with the Slop Cannon, the Minimum Valuable Project (MVaP) worth shipping. Shepherds what earns its place into systems that survive production.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export function DefinitionsPod() {
             }}
           />
           <p style={{ fontSize: "0.65em", lineHeight: 1.75, color: "rgba(28, 27, 25, 0.4)" }}>
-            High-velocity builder. Not necessarily an engineer by trade — often a junior eng or a technically proficient business SME. Ships creative, working MVPs fast. Both work in tandem with a focus on compounding intelligence and deterministic use cases for generative AI.
+            High-velocity builder. Often from outside engineering, or an early-career engineer with subject-matter expertise (or the drive to learn it). Ships rough, fast, in public, unburdened by what the stack supposedly cannot do. Pairs with the Expert Scaler to deliver the MVaP, keeping ideas alive past first contact with production.
           </p>
         </div>
       </div>
