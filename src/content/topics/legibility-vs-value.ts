@@ -16,7 +16,7 @@ export const TOPIC_META = {
 };
 
 export const TOPIC_PARAGRAPHS = [
-  `Every dysfunctional engineering org I have worked in or consulted for shares one pathology. The structure was built to explain itself to the people who fund it, not to be useful to the people it serves.`,
+  `Dysfunctional engineering teams and organizations seem to share a pathology. I have seen it or heard it enough times from insiders to name it. The structure was built to explain itself to the people who fund it, not to be useful to the people it serves.`,
 
   `This is not a failure of individuals. It is what systems do when the incentive to narrate the work outpaces the incentive to ship it.`,
 

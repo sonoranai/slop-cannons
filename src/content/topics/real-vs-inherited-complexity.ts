@@ -31,7 +31,7 @@ export const TOPIC_PARAGRAPHS = [
 
   `Inherited complexity is none of the above. It is the process, structure, and apparatus that accumulated as rational responses to specific incidents, constraints, or political moments that may no longer exist. The team was split into three squads because headcount hit a threshold where some VP decided it needed a director, and directors need multiple teams. The approval chain for production deployments exists because someone pushed a bad config in 2019 and the postmortem recommended a review step. The step is still there. The 2019 pipeline has been replaced twice since. Nobody revisited the step.`,
 
-  `The canonical example is the architecture review board. I have seen ARBs that have not had a member touch production code in three years. They review designs on paper, add process gates, and require documentation whose purpose is to satisfy the gate, not to communicate anything useful. The designs that survive the ARB are not better designs. They are designs that are better at passing the ARB. Those are different things. The board selects for legibility to non-practitioners, not for quality.`,
+  `The canonical example is the architecture review board. It is not unusual to find an ARB where none of the members has touched production code in three years. They review designs on paper, add process gates, and require documentation whose purpose is to satisfy the gate, not to communicate anything useful. The designs that survive the ARB are not better designs. They are designs that are better at passing the ARB. Those are different things. The board selects for legibility to non-practitioners, not for quality.`,
 
   `How do you tell inherited complexity from real?`,
 

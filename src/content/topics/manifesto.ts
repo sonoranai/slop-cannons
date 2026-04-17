@@ -25,7 +25,9 @@ export const TOPIC_PARAGRAPHS = [
 
   `This was an expensive but defensible structure for most of software's history. Building was genuinely hard. Large teams, long cycles, expensive mistakes. Coordinating that work across a hundred engineers required interpretation layers. Directors translated product strategy into engineering plans. Program managers tracked dependencies across teams. Engineering managers converted individual contributor output into leadership-legible narratives. The tax was real. So was the complexity it managed.`,
 
-  `AI changed the cost function. Not eventually. Now. A single person with domain expertise and an AI pair can produce in a day what a cross-functional team of eight produced in a sprint. That is not a forecast. That is Tuesday. I have watched a head of RevOps who had never opened a terminal ship a commission-reconciliation tool that had been stuck in the engineering backlog for eighteen months. It replaced a spreadsheet in a week and a vendor contract in a month. A junior engineer on the same team closed out a backlog ticket that had sat for two years because "it needed an architecture review," against a staging branch, before the review was scheduled.`,
+  `AI changed the cost function. Not eventually. Now. A single person with domain expertise and an AI assistant can ship in a day what a team of eight would have taken a month to produce. That is not a forecast. That is Tuesday.`,
+
+  `The pattern shows up everywhere once you start looking. An accountant without coding experience writes the reconciliation tool her team had been asking engineering to schedule for over a year. Someone early in their career ships a long-carried task against a staging branch before the review is on anyone's calendar. No heroics. The tools met people where they were.`,
 
   `When building gets that cheap, coordination becomes the dominant cost. Not compute. Not salaries. The largest line item in your engineering budget is the org chart and the ceremonies that keep it upright.`,
 
