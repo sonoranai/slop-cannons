@@ -20,37 +20,53 @@ async function loadFont(weight: 400 | 500 | 700): Promise<ArrayBuffer> {
   return res.arrayBuffer();
 }
 
-export function makeSnippet(paragraphs: string[], maxChars = 360): string {
-  if (!paragraphs.length) return "";
-  let combined = paragraphs[0] || "";
-  for (let i = 1; i < paragraphs.length && combined.length < maxChars; i++) {
-    combined += " " + paragraphs[i];
-  }
+// Returns an array of paragraphs, preserving the source's paragraph
+// structure (single-sentence percussion beats, etc). The last paragraph
+// always ends with an ellipsis to signal continuation.
+export function makeSnippet(paragraphs: string[], maxChars = 340): string[] {
+  if (!paragraphs.length) return [];
 
-  let result: string;
-  if (combined.length <= maxChars) {
-    result = combined;
-  } else {
-    const truncated = combined.slice(0, maxChars);
+  const result: string[] = [];
+  let charCount = 0;
+
+  for (const para of paragraphs) {
+    const remaining = maxChars - charCount;
+    if (remaining <= 0) break;
+
+    if (para.length <= remaining) {
+      result.push(para);
+      charCount += para.length + 1;
+      continue;
+    }
+
+    // Need to truncate this paragraph at a sentence boundary.
+    const truncated = para.slice(0, remaining);
     const ends = [". ", "! ", "? "].map((p) => truncated.lastIndexOf(p));
     const lastEnd = Math.max(...ends);
-    if (lastEnd > maxChars * 0.5) {
-      result = truncated.slice(0, lastEnd + 1).trim();
-    } else {
-      result = truncated.slice(0, truncated.lastIndexOf(" ")).trim();
+
+    if (lastEnd > remaining * 0.5) {
+      result.push(truncated.slice(0, lastEnd + 1).trim());
+    } else if (result.length === 0) {
+      // First paragraph with no good sentence break; fall back to word.
+      result.push(truncated.slice(0, truncated.lastIndexOf(" ")).trim());
     }
+    break;
   }
 
-  // Always end with an ellipsis to signal continuation. Strip trailing
-  // terminal punctuation so we don't double up (e.g., "sentence.…").
-  result = result.replace(/[.!?]+$/, "").trim();
-  return result + "…";
+  if (result.length === 0) return [];
+
+  // Always end the final paragraph with an ellipsis. Strip any trailing
+  // terminal punctuation so we don't double up.
+  const lastIndex = result.length - 1;
+  result[lastIndex] = result[lastIndex].replace(/[.!?]+$/, "").trim() + "…";
+
+  return result;
 }
 
 interface OgImageOptions {
   title: string;
   subtitle?: string;
-  snippet: string;
+  snippet: string[];
   slug?: string;
 }
 
@@ -77,33 +93,26 @@ export async function generateOgImage({
         style={{
           display: "flex",
           flexDirection: "column",
+          justifyContent: "space-between",
           width: "100%",
           height: "100%",
-          padding: "64px 90px 60px",
+          padding: "64px 90px 52px",
           backgroundColor: "#FAF9F6",
           fontFamily: "JetBrains Mono",
         }}
       >
-        {/* Top row: URL left, icons right */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 46,
-          }}
-        >
+        {/* Content block */}
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          {/* Top row: icons right */}
           <div
             style={{
               display: "flex",
-              fontSize: 20,
-              color: ICON_COLOR,
-              fontWeight: 500,
+              justifyContent: "flex-end",
+              alignItems: "center",
+              marginBottom: 46,
+              gap: 26,
             }}
           >
-            {addressText}
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
             {/* LinkedIn */}
             <svg
               width="30"
@@ -143,64 +152,88 @@ export async function generateOgImage({
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
           </div>
-        </div>
 
-        {/* Title */}
-        <div
-          style={{
-            display: "flex",
-            fontSize: titleFontSize,
-            fontWeight: 700,
-            color: "#2A4A7F",
-            lineHeight: 1.08,
-            letterSpacing: "-0.01em",
-            marginBottom: 14,
-            maxWidth: 1020,
-          }}
-        >
-          {title}
-        </div>
-
-        {/* Subtitle */}
-        {subtitle ? (
+          {/* Title */}
           <div
             style={{
               display: "flex",
-              fontSize: 26,
-              color: "rgba(140, 120, 180, 0.7)",
-              fontWeight: 400,
-              marginBottom: 30,
+              fontSize: titleFontSize,
+              fontWeight: 700,
+              color: "#2A4A7F",
+              lineHeight: 1.08,
+              letterSpacing: "-0.01em",
+              marginBottom: 14,
               maxWidth: 1020,
             }}
           >
-            {subtitle}
+            {title}
           </div>
-        ) : null}
 
-        {/* Divider */}
+          {/* Subtitle */}
+          {subtitle ? (
+            <div
+              style={{
+                display: "flex",
+                fontSize: 26,
+                color: "rgba(140, 120, 180, 0.7)",
+                fontWeight: 400,
+                marginBottom: 28,
+                maxWidth: 1020,
+              }}
+            >
+              {subtitle}
+            </div>
+          ) : null}
+
+          {/* Divider */}
+          <div
+            style={{
+              display: "flex",
+              width: 400,
+              height: 1,
+              backgroundColor: "rgba(28, 27, 25, 0.18)",
+              alignSelf: "center",
+              marginBottom: 28,
+            }}
+          />
+
+          {/* Body snippet — paragraphs preserved */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 18,
+              maxWidth: 1020,
+            }}
+          >
+            {snippet.map((para, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  fontSize: 22,
+                  color: "rgba(28, 27, 25, 0.78)",
+                  lineHeight: 1.5,
+                  fontWeight: 400,
+                }}
+              >
+                {para}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom-right canonical URL */}
         <div
           style={{
             display: "flex",
-            width: 400,
-            height: 1,
-            backgroundColor: "rgba(28, 27, 25, 0.18)",
-            alignSelf: "center",
-            marginBottom: 30,
-          }}
-        />
-
-        {/* Body snippet */}
-        <div
-          style={{
-            display: "flex",
-            fontSize: 22,
-            color: "rgba(28, 27, 25, 0.78)",
-            lineHeight: 1.5,
-            fontWeight: 400,
-            maxWidth: 1020,
+            justifyContent: "flex-end",
+            fontSize: 20,
+            color: ICON_COLOR,
+            fontWeight: 500,
           }}
         >
-          {snippet}
+          {addressText}
         </div>
       </div>
     ),
