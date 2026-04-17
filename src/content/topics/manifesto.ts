@@ -35,7 +35,7 @@ export const TOPIC_PARAGRAPHS = [
 
   `The compressed org is not anti-structure. It is not anti-management. It is not a call for anarchy or solo-founder romanticism. It is a call to notice what the structure is actually doing. Which parts of the apparatus are load-bearing, meaning the parts that produce, move, or protect something a user cares about, and which parts exist because the apparatus produces apparatus. Kill the second kind. Keep the first, and keep it honest.`,
 
-  `The structural claim: layers replaced with pairs. Two people at a time, one problem, a week of deep focus, then recomposed against the next. No standing committees. No round-tripped status. The work finds the pair, the pair closes it, the pair dissolves and reforms. Expert Scaler and Slop Cannon. Architecture and velocity in the same room, talking.`,
+  `The structural claim: layers replaced with pairs. Two people at a time, one problem, a week of deep focus, then recomposed against the next. No standing committees. No round-tripped status. The work finds the pair, the pair closes it, the pair dissolves and reforms. Expert Scaler and Slop Cannon. Deep technical judgment and a creative waterfall in the same room, talking.`,
 
   `There is a cost. The compressed org asks something of its practitioners that most orgs currently do not ask, and do not train for.`,
 

@@ -2,35 +2,75 @@ export const TOPIC_META = {
   title: "The Fire Team Model",
   subtitle: "The Atomic Unit of the Compressed Organization",
   description:
-    "How fire teams work in the compressed org. Pairs of one Expert Scaler and one Slop Cannon form elastic, deployable units that replace traditional cross-functional teams with focused, high-velocity execution.",
+    "Why two people is the right number, not one and not three. How a fire team differs from a squad, a pod, a two-pizza team, or a guild. The stream brief that replaces the standup. The routing cadence that replaces intake triage. And what fire teams are genuinely bad at.",
   slug: "fire-team-model",
   keywords: [
     "fire team model",
     "engineering team structure",
     "compressed organization",
-    "expert scaler",
-    "slop cannon",
-    "pair programming",
+    "pair shipping",
+    "stream brief",
+    "engineering routing",
     "engineering org design",
   ],
 };
 
 export const TOPIC_PARAGRAPHS = [
-  `The basic unit of the compressed organization is the fire team. Two people. One Expert Scaler, one Slop Cannon. That is the atomic unit. Everything else -- streams, portfolios, organizational structure -- exists to support, deploy, and recompose these pairs.`,
+  `Two people is the smallest number that can ship.`,
 
-  `Think of each fire team as a container. Elastic. Stateful in domain expertise but loosely coupled to any particular product or codebase. Deployed to the highest-value problem available this week. Recomposed when the problem changes or when a different pairing would be more effective. This is not anarchy. This is orchestration. The difference between the two is whether someone with taste is deciding where the containers run.`,
+  `A fire team is a pair. One Expert Scaler, one Slop Cannon. They hold one problem for a week or two, ship the thing, and recompose against the next. That is the unit. Everything around it (leadership, streams of practice, routing) exists to feed pairs and move them, not to coordinate them internally.`,
 
-  `The Expert Scaler holds the architectural context. They see the system at scale. They know where the load-bearing decisions live, which abstractions are going to crack under pressure, and which feature requests are actually infrastructure problems in disguise. Their job is not to write all the code. Their job is to ensure the Slop Cannon builds the right thing, in the right place, with an architecture that will survive contact with production traffic.`,
+  `Defining a fire team requires separating it from the structures it most resembles.`,
 
-  `The Slop Cannon builds. Fast. They take a problem definition, pair with AI tools, and produce working software at a velocity that would have been impossible three years ago. They are not junior in the pejorative sense. They are junior in the sense that the compressed org does not care how many years you have been in the industry. It cares whether you can see a problem, describe it clearly, build something that addresses it, and know when to stop polishing.`,
+  `Not a squad. A squad has a product manager, an engineering manager, three to six engineers, a designer, and a dedicated QA person or two. A squad has rituals. A squad has its own standing agenda. A fire team has none of that. Two people sharing a screen do not need a PM to prioritize their work. They have already prioritized by agreeing to take the problem.`,
 
-  `The pairing works because each half compensates for what the other lacks. The Expert Scaler without a Slop Cannon is an architect drawing blueprints nobody builds. The Slop Cannon without an Expert Scaler is a builder shipping fast in the wrong direction. Together they are the 10x engineer -- not a mythical individual, but a composition. The myth was always that one person could hold both deep systems context and relentless shipping velocity simultaneously. Some can. Most cannot. The fire team stops pretending and makes the split explicit.`,
+  `Not a pod. A pod is a branded squad with five to eight members and a mission statement. It carries most of the squad's overhead plus an extra layer of identity. A fire team has no mission statement. It has the problem it is working on right now.`,
 
-  `Fire teams operate within streams of subject-matter expertise. A stream might be payments infrastructure, or compliance automation, or customer onboarding. The stream provides continuity of context -- the fire team knows the domain, the stakeholders, the failure modes, the history of decisions that led to the current architecture. But the team itself is not permanently assigned. If the payments stream has no high-value work this week and the onboarding stream has a critical problem, the fire team moves. The stream is the river. The fire team is the boat.`,
+  `Not a two-pizza team. Amazon's two-pizza rule was a ceiling on team size to prevent communication overhead from crushing velocity. A two-pizza team is still six to ten people. A fire team is smaller by an order of magnitude and treats even the two-pizza size as already too much coordination.`,
 
-  `Recomposition is the mechanism that keeps this from becoming a static org chart with a different name. Every week, leadership evaluates where the highest-value problems are and whether the current fire team assignments are optimal. Sometimes a Slop Cannon who has been working in compliance needs to pair with a different Expert Scaler who has deeper context on a new regulatory requirement. Sometimes an Expert Scaler needs to work alone for a few days on a design problem before a Slop Cannon can be effective. The structure is not rigid. That is the point.`,
+  `Not a guild. Guilds are horizontal alignments across teams where practitioners of a discipline share context. Guilds are useful, and the compressed org keeps them. They do not ship. They give fire teams a shared pool of practice to draw from and contribute back to.`,
 
-  `What makes this work in practice is trust and communication density. Two people do not need a standup. They do not need a Jira board. They do not need a program manager to track their dependencies. They talk. They share a screen. They make a decision and move. The coordination overhead that destroys velocity in traditional teams -- the standups, the sprint ceremonies, the cross-team alignment meetings, the dependency tracking spreadsheets -- evaporates when the unit of execution is two people who are already aligned because they are sitting next to each other.`,
+  `A fire team is two people and one problem. Full stop.`,
 
-  `The fire team model is not a thought experiment. I have run teams this way. The output difference is not incremental. It is structural. A fire team producing working software in days that would have taken a traditional squad weeks is not an exaggeration. It is the natural result of removing every layer between a clear problem and the people capable of solving it.`,
+  `Why two? Why not one? Why not three?`,
+
+  `Not one, because sustained quality on real software takes two kinds of attention. One attention is building. Moving forward through the work, producing the next artifact, maintaining momentum. The other attention is architectural skepticism. Stopping, reading the shape of what just got built, asking whether it survives the second pass. One person can do both, but not well and not simultaneously. The industry spent two decades calling the people who could hold both "10x engineers" and treating them as anomalies. They were early. The pair is the same capability, made reliable.`,
+
+  `Not three, because the third person introduces coordination overhead out of proportion to the output gain. Three people need to talk to each other, not just to the work. Decisions get debated instead of made. The shared-screen intimacy of two becomes a round-trip meeting. The third also creates a subtle political problem. When two of three disagree, the third becomes the swing vote, and the swing vote becomes a power position the role was not designed for.`,
+
+  `Two is the number where two people can hold a full context between them and still move at the speed of one. The pairing is intimate. It is not anonymous. Most fire teams pair the same two people for at least a week at a time, because that is how long it takes to sync deeply enough that the pair is operating as one extended brain.`,
+
+  `The Expert Scaler holds the architecture in their head. The blast radius, the failure modes, the prior art. They read the proposal against the stack. They say which box to erase.`,
+
+  `The Slop Cannon ships. They take the problem and produce working software against real or realistic data within a day. They write the README, record the Loom, hand the package to the Expert Scaler for the second pass.`,
+
+  `They are not a boss-and-worker pair. They are two halves of one unit. The Expert Scaler brings the deep technical read. What the stack can do, what it shouldn't, what is already there. The Slop Cannon brings a creative waterfall, often from outside engineering, unburdened by what supposedly cannot be built. They see the problem from the user's side. Their lack of deep software knowledge is part of what makes them valuable. It pushes the Expert Scaler to ask whether "cannot" actually means "has not yet," and to invent a version of the idea that is buildable instead of automatically erasing it. The Slop Cannon widens what the Expert Scaler considers. The Expert Scaler keeps what the Slop Cannon imagines from dying on first contact with production. Alone, each half is narrower than either realizes.`,
+
+  `Here is what a week looks like.`,
+
+  `Monday. The pair is deep in payments reconciliation. A 3DS fallback failure rate has been climbing for three weeks. The Expert Scaler has pulled the telemetry and can name the two suspect code paths. The Slop Cannon opens a branch and starts building a shadow path that routes around the suspect code while logging what would have happened if the live path had succeeded.`,
+
+  `Wednesday. Leadership sees a compliance filing deadline slip. The Slop Cannon gets reassigned to a compliance Expert Scaler who has regulatory context. The original Expert Scaler holds the payments thread solo for two days, writing the design doc the new pair will pick up Monday.`,
+
+  `The document that travels between these moments is a five-hundred-word stream brief. Not a Jira ticket. Not a Confluence page. A short, human document that names the problem, the open decisions, the dead ends already ruled out, and the next three moves. The Expert Scaler writes it in twenty minutes. The receiving pair reads it first thing Monday. It replaces three standups and the sprint-planning meeting that would otherwise be needed to re-establish context.`,
+
+  `Friday afternoon the pair writes the next brief. Monday someone else picks it up.`,
+
+  `The routing mechanism is its own artifact. Every Monday, leadership reads the open stream briefs and a value-weighted queue of work. They route pairs against problems for the week. Any Expert Scaler can mark an item on the queue urgent. The meeting is thirty minutes. It replaces intake triage, capacity planning, and the weekly status round-trip a traditional org needs to move people between teams.`,
+
+  `The stream is the river. The fire team is the boat.`,
+
+  `There is a cost. An honest argument for the model names it.`,
+
+  `Fire teams are weak at long-horizon projects. A migration that takes six months needs continuity of context a weekly recomposition breaks. The compressed org handles this by keeping a pair assigned to the long-horizon work for as long as it takes, explicitly. Compression is a default, not a law.`,
+
+  `Fire teams struggle with multi-party coordination. When a change requires sign-off from legal, security, and compliance, the pair cannot just push through. The coordination is the work, and it is slow. Leadership has to own those dependencies, not the pair.`,
+
+  `Fire teams lose redundancy. If one half of a pair is sick for a week, the work pauses. Traditional teams buffer against this with bench depth. Fire teams do not. The compressed org accepts the pause as the cost of operating lean.`,
+
+  `Fire teams assume operating maturity. Two people shipping without a PM, without an EM, without a standing review cadence, have to self-govern. That is a skill, and not everyone has it on day one. New hires spend their first quarter paired with more experienced practitioners before taking a pair seat.`,
+
+  `The balance is honest about the shape of the work. Fire teams ship faster than any squad ever shipped, when the work fits the model. When the work does not fit the model, the compressed org uses different shapes. Long migrations get dedicated pairs. Regulated gates get leadership to own the dependency chain. Heavy operational maintenance keeps stable rotations because stability is the point. The compressed org is not dogma. It is a default that knows its own exceptions.`,
+
+  `Two people. One problem. One brief. Move.`,
 ];

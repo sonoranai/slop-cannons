@@ -1,87 +1,156 @@
 export const TOPIC_META = {
   title: "Glossary",
-  subtitle: "Key Terms and Definitions",
+  subtitle: "The Working Vocabulary",
   description:
-    "Definitions for key terms used throughout Slop Cannons: slop cannon, expert scaler, fire team, the compression, inherited complexity, and more.",
+    "The vocabulary is load-bearing. Every term here is a wedge, not a description. Organized by the role each word plays in the argument: the force, the structure, the diseases, the mechanics.",
   slug: "glossary",
   keywords: [
     "slop cannon definition",
     "expert scaler definition",
     "fire team model",
     "compressed organization",
+    "malinvestment",
+    "calibration theater",
+    "structured exhaust",
     "engineering org design glossary",
-    "coordination overhead",
-    "process theater",
   ],
 };
 
+export const GLOSSARY_INTRO =
+  "This is not a dictionary. These are claims. The vocabulary is load-bearing, and every term is a wedge, not a description. If a definition here reads like Wikipedia, it failed.";
+
+export const CLUSTER_ORDER = [
+  "The Force",
+  "The Structure",
+  "The Diseases",
+  "The Mechanics",
+] as const;
+
+export type Cluster = (typeof CLUSTER_ORDER)[number];
+
 export const GLOSSARY_ENTRIES: {
   term: string;
+  cluster: Cluster;
   definition: string;
   link?: string;
 }[] = [
-  {
-    term: "Slop Cannon",
-    definition:
-      "A high-velocity builder who ships fast, iterates in public, and treats rough output as a feature, not a flaw. Paired with an Expert Scaler in a fire team. The name is deliberate -- most gatekeeping around code quality is a defense of slowness, not a defense of users. The slop cannon optimizes for learning speed and user-facing outcomes over internal polish.",
-    link: "/slop-cannon",
-  },
-  {
-    term: "Expert Scaler",
-    definition:
-      "The senior practitioner in a fire team who holds architectural context, system-level taste, and the judgment to know what should not be built at all. Not a manager. Not a reviewer. A force multiplier whose pattern recognition -- earned from years of building and breaking systems -- shapes the direction and quality of what the slop cannon produces.",
-    link: "/expert-scaler",
-  },
-  {
-    term: "Fire Team",
-    definition:
-      "The core operating unit of a compressed organization: one Expert Scaler paired with one Slop Cannon. Borrowed from military terminology where a fire team is the smallest unit that can operate independently. Loosely coupled to other teams, deeply stateful in their domain. Replaces the traditional squad or scrum team as the atomic unit of delivery.",
-    link: "/fire-team-model",
-  },
+  // The Force
   {
     term: "The Compression",
+    cluster: "The Force",
     definition:
-      "The ongoing collapse of software building cost driven by AI tooling. When building becomes an order of magnitude cheaper, coordination overhead becomes the dominant expense, exposing organizational structures that exist for legibility rather than value creation. The compression is not a future event -- it is happening now.",
-  },
-  {
-    term: "Compressed Organization",
-    definition:
-      "An engineering organization redesigned for a post-compression world. Fewer layers, smaller teams, domain experts as builders, leadership redefined as taste and problem curation rather than status translation. Not a headcount reduction exercise -- a structural response to the new cost function of building software.",
-  },
-  {
-    term: "Legibility vs Value",
-    definition:
-      "The tension between making work understandable to leadership and making work valuable to users. Most engineering organizations optimize for legibility -- dashboards, status reports, quarterly planning rituals -- at the expense of value. The compressed org inverts this priority: value to users first, legibility to leadership only where it does not slow delivery.",
-  },
-  {
-    term: "Inherited Complexity",
-    definition:
-      "Organizational processes and structures that accumulated as rational responses to past constraints but persist after those constraints no longer exist. Approval chains from decade-old incidents, team splits driven by headcount thresholds, architecture review boards that no longer touch production. Distinguished from real complexity, which originates in the problem domain itself.",
-    link: "/real-vs-inherited-complexity",
-  },
-  {
-    term: "Domain Expert as Builder",
-    definition:
-      "The shift enabled by AI tooling where people with deep problem-domain knowledge -- compliance analysts, traders, operations specialists -- can build software directly rather than describing requirements to engineers. The person who understands the problem best becomes the person who builds the solution, collapsing the translation layer between need and implementation.",
+      "Building software is collapsing in cost. Coordination is not. Whatever existed to make work legible upward now stands exposed as the dominant expense. It is happening now.",
+    link: "/compressed-organization",
   },
   {
     term: "Forcing Function",
+    cluster: "The Force",
     definition:
-      "A constraint or event that compels organizational change that would otherwise be deferred. The compression is a forcing function: it makes coordination overhead visible by making building cheap enough that the overhead becomes the dominant cost. Organizations either respond to forcing functions or are restructured by competitors who did.",
+      "Reality arriving whether you scheduled it or not. Organizations respond to forcing functions or get restructured by the ones that did. AI is the current one on engineering org design.",
+    link: "/ai-forcing-function",
   },
   {
-    term: "Translation Layer",
+    term: "Malinvestment",
+    cluster: "The Force",
     definition:
-      "Any organizational role or process that exists primarily to convert information between people who do the work and people who evaluate the work. Program managers translating engineering status into executive dashboards. Product managers translating user needs into Jira tickets. Each layer adds latency and loses fidelity. The compressed org minimizes translation layers by putting decision-makers closer to the work.",
+      "The hierarchical instinct to grow scope and headcount without moving revenue, valuation, or user outcomes. In the old org it was invisible. In the compressed org, the exhaust makes it loud.",
+  },
+
+  // The Structure
+  {
+    term: "Fire Team",
+    cluster: "The Structure",
+    definition:
+      "Two people. One pair. The smallest unit that can ship something real without asking permission. An Expert Scaler and a Slop Cannon, deployed across streams, recomposed when the problem changes.",
+    link: "/fire-team-model",
   },
   {
-    term: "Coordination Overhead",
+    term: "Expert Scaler",
+    cluster: "The Structure",
     definition:
-      "The total organizational cost of synchronizing work across people, teams, and functions. Includes meetings, status updates, handoffs, approval chains, and alignment rituals. In traditional orgs, coordination overhead is accepted as the cost of doing business. In a compressed org, it is recognized as the dominant expense and actively minimized.",
+      "Holds the architecture in their head and knows what not to build. Not a manager. Not a reviewer. Pattern recognition earned by breaking systems. Widened by a Slop Cannon who proposes things the Expert Scaler alone would never ask for.",
+    link: "/expert-scaler",
+  },
+  {
+    term: "Slop Cannon",
+    cluster: "The Structure",
+    definition:
+      "Ships rough, fast, in public. A creative waterfall, often from outside engineering, unburdened by what the stack supposedly cannot do. The lack of deep technical knowledge is part of what makes them valuable. Paired with an Expert Scaler who keeps the ideas from dying on first contact with production.",
+    link: "/slop-cannon",
+  },
+  {
+    term: "10x Engineer",
+    cluster: "The Structure",
+    definition:
+      "A preview of the fire team. One person who held both halves, taste and velocity, and delivered what the old org could not process. The industry called them anomalies. They were early.",
+  },
+  {
+    term: "The Compressed Organization",
+    cluster: "The Structure",
+    definition:
+      "The structural response to a post-AI cost function. Fewer layers. Smaller units. Experts who build. Leaders who curate problems and taste instead of translating status. Not a layoff. A resizing.",
+    link: "/compressed-organization",
+  },
+
+  // The Diseases
+  {
+    term: "Career Ladder",
+    cluster: "The Diseases",
+    definition:
+      "Not a development tool. An organizational self-portrait. It persists because the org needs to see itself, not because it builds people.",
+  },
+  {
+    term: "Legibility vs Value",
+    cluster: "The Diseases",
+    definition:
+      "Most orgs optimize for being understood by leadership. The compressed org optimizes for being useful to users. These goals compete more often than anyone admits.",
+    link: "/legibility-vs-value",
   },
   {
     term: "Process Theater",
+    cluster: "The Diseases",
     definition:
-      "Organizational rituals that create the appearance of rigor without improving outcomes. Sprint planning that produces estimates nobody uses. Architecture reviews that rubber-stamp decisions already made. Retrospectives that generate action items nobody tracks. Distinguished from legitimate process by a simple test: if you removed it, would the quality of what you ship change?",
+      "Ceremony that produces the appearance of rigor and no change in outcome. Sprint planning nobody follows. Reviews that rubber-stamp decisions already made. The test: if you removed it, would the product be worse?",
+  },
+  {
+    term: "Calibration Theater",
+    cluster: "The Diseases",
+    definition:
+      "Careers negotiated by people who have never read the engineer's code. A closed room ratifying narratives assembled by managers about work they could not operate.",
+  },
+  {
+    term: "Inherited Complexity",
+    cluster: "The Diseases",
+    definition:
+      "Process that made sense once, and exists now because removing it would require someone to admit it outlived its purpose. Approval chains from a decade-old incident. Review boards whose members have not deployed in years.",
+    link: "/real-vs-inherited-complexity",
+  },
+  {
+    term: "Translation Layer",
+    cluster: "The Diseases",
+    definition:
+      "Anyone whose job is to explain the work to someone who will never do it. Every layer adds latency and loses fidelity. Minimize.",
+  },
+  {
+    term: "Coordination Overhead",
+    cluster: "The Diseases",
+    definition:
+      "The cost of everyone agreeing on what everyone else is doing. Meetings. Updates. Handoffs. The traditional org calls it the price of doing business. The compressed org calls it the business.",
+  },
+
+  // The Mechanics
+  {
+    term: "Structured Exhaust",
+    cluster: "The Mechanics",
+    definition:
+      "What a fire team leaves behind when it ships. Measurable signals of value created, captured in fields the business can evaluate. Replaces the middle manager's subjective interpretation of who contributed what.",
+    link: "/incentive-alignment",
+  },
+  {
+    term: "Domain Expert as Builder",
+    cluster: "The Mechanics",
+    definition:
+      "The compliance analyst writes the compliance tool. The trader builds the trading interface. The translation layer between 'knows the problem' and 'ships the solution' collapses when the model generates code the domain expert could always describe.",
+    link: "/domain-experts-as-builders",
   },
 ];
