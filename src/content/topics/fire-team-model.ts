@@ -30,7 +30,7 @@ export const TOPIC_PARAGRAPHS = [
 
   `Not a guild. Guilds are horizontal alignments across teams where practitioners of a discipline share context. Guilds are useful, and the compressed org keeps them. They do not ship. They give fire teams a shared pool of practice to draw from and contribute back to.`,
 
-  `A fire team is two people and one problem. Full stop.`,
+  `A fire team is two people and one problem. Nothing else belongs inside the unit.`,
 
   `Why two? Why not one? Why not three?`,
 
