@@ -61,6 +61,8 @@ export const TOPIC_PARAGRAPHS = [
 
   `Middle management will argue the compressed org cannot handle complexity. They are wrong, but they are not lying. From inside a system that requires coordination at every seam, removing seams looks like removing capability. It is not. It is removing latency. The complexity was always in the work.`,
 
+  `Worth naming: the compression is not about getting rid of the people in the middle. Product managers, project managers, program managers carry real skill when the job is measured by outcomes and not by narration. Many are high-value Slop Cannons already. Close to the problem, carrying deep and broad understanding earned by working on real systems and real business problems. Earned is the word that matters. Running status meetings does not earn it.`,
+
   `This structure will not reform itself. The layers that need to be compressed are the same layers that approve org changes. The budgets are controlled by the roles that would be cut. So the compression comes from outside. Economics that punish the slow. Tools that expose the overhead. Competitors who prove it was never necessary. The best builders leaving for environments where the ratio of making to narrating favors making.`,
 
   `Here is the math. In the old world, a medium feature cost roughly $400k of engineering time. Coordination cost about $40k. Product managers, engineering managers, calibrations, review boards, release trains. Spending ten percent on coordination was rational. It was insurance against a mistake that would have cost more.`,
