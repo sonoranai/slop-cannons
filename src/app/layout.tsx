@@ -10,6 +10,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://slopcannons.com"),
   title: "SLOP CANNONS",
   alternates: {
     types: {

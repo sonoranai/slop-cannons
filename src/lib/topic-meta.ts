@@ -24,7 +24,7 @@ export function buildTopicMetadata(opts: TopicMetaOptions): Metadata {
       authors: ["Jason Neill"],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: `${opts.title} — SLOP CANNONS`,
       description: opts.description,
     },
